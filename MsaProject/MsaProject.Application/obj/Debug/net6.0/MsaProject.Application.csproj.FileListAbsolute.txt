@@ -1,0 +1,12 @@
+C:\Users\win 10\OneDrive\Desktop\ms-project\MsaProject\MsaProject.Application\bin\Debug\net6.0\MsaProject.Application.deps.json
+C:\Users\win 10\OneDrive\Desktop\ms-project\MsaProject\MsaProject.Application\bin\Debug\net6.0\MsaProject.Application.dll
+C:\Users\win 10\OneDrive\Desktop\ms-project\MsaProject\MsaProject.Application\bin\Debug\net6.0\MsaProject.Application.pdb
+C:\Users\win 10\OneDrive\Desktop\ms-project\MsaProject\MsaProject.Application\obj\Debug\net6.0\MsaProject.Application.csproj.AssemblyReference.cache
+C:\Users\win 10\OneDrive\Desktop\ms-project\MsaProject\MsaProject.Application\obj\Debug\net6.0\MsaProject.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\win 10\OneDrive\Desktop\ms-project\MsaProject\MsaProject.Application\obj\Debug\net6.0\MsaProject.Application.AssemblyInfoInputs.cache
+C:\Users\win 10\OneDrive\Desktop\ms-project\MsaProject\MsaProject.Application\obj\Debug\net6.0\MsaProject.Application.AssemblyInfo.cs
+C:\Users\win 10\OneDrive\Desktop\ms-project\MsaProject\MsaProject.Application\obj\Debug\net6.0\MsaProject.Application.csproj.CoreCompileInputs.cache
+C:\Users\win 10\OneDrive\Desktop\ms-project\MsaProject\MsaProject.Application\obj\Debug\net6.0\MsaProject.Application.dll
+C:\Users\win 10\OneDrive\Desktop\ms-project\MsaProject\MsaProject.Application\obj\Debug\net6.0\refint\MsaProject.Application.dll
+C:\Users\win 10\OneDrive\Desktop\ms-project\MsaProject\MsaProject.Application\obj\Debug\net6.0\MsaProject.Application.pdb
+C:\Users\win 10\OneDrive\Desktop\ms-project\MsaProject\MsaProject.Application\obj\Debug\net6.0\ref\MsaProject.Application.dll
