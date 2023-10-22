@@ -12,3 +12,17 @@ C:\Users\win 10\OneDrive\Desktop\ms-project\MsaProject\MsaProject.Domain\obj\Deb
 C:\Users\win 10\OneDrive\Desktop\ms-project\MsaProject\MsaProject.Domain\obj\Debug\net6.0\MsaProject.Domain.pdb
 C:\Users\win 10\OneDrive\Desktop\ms-project\MsaProject\MsaProject.Domain\obj\Debug\net6.0\MsaProject.Domain.genruntimeconfig.cache
 C:\Users\win 10\OneDrive\Desktop\ms-project\MsaProject\MsaProject.Domain\obj\Debug\net6.0\ref\MsaProject.Domain.dll
+C:\Users\Mihai\Source\Repos\ms-project\MsaProject\MsaProject.Domain\bin\Debug\net6.0\MsaProject.Domain.deps.json
+C:\Users\Mihai\Source\Repos\ms-project\MsaProject\MsaProject.Domain\bin\Debug\net6.0\MsaProject.Domain.runtimeconfig.json
+C:\Users\Mihai\Source\Repos\ms-project\MsaProject\MsaProject.Domain\bin\Debug\net6.0\MsaProject.Domain.dll
+C:\Users\Mihai\Source\Repos\ms-project\MsaProject\MsaProject.Domain\bin\Debug\net6.0\MsaProject.Domain.pdb
+C:\Users\Mihai\Source\Repos\ms-project\MsaProject\MsaProject.Domain\obj\Debug\net6.0\MsaProject.Domain.csproj.AssemblyReference.cache
+C:\Users\Mihai\Source\Repos\ms-project\MsaProject\MsaProject.Domain\obj\Debug\net6.0\MsaProject.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mihai\Source\Repos\ms-project\MsaProject\MsaProject.Domain\obj\Debug\net6.0\MsaProject.Domain.AssemblyInfoInputs.cache
+C:\Users\Mihai\Source\Repos\ms-project\MsaProject\MsaProject.Domain\obj\Debug\net6.0\MsaProject.Domain.AssemblyInfo.cs
+C:\Users\Mihai\Source\Repos\ms-project\MsaProject\MsaProject.Domain\obj\Debug\net6.0\MsaProject.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Mihai\Source\Repos\ms-project\MsaProject\MsaProject.Domain\obj\Debug\net6.0\MsaProject.Domain.dll
+C:\Users\Mihai\Source\Repos\ms-project\MsaProject\MsaProject.Domain\obj\Debug\net6.0\refint\MsaProject.Domain.dll
+C:\Users\Mihai\Source\Repos\ms-project\MsaProject\MsaProject.Domain\obj\Debug\net6.0\MsaProject.Domain.pdb
+C:\Users\Mihai\Source\Repos\ms-project\MsaProject\MsaProject.Domain\obj\Debug\net6.0\MsaProject.Domain.genruntimeconfig.cache
+C:\Users\Mihai\Source\Repos\ms-project\MsaProject\MsaProject.Domain\obj\Debug\net6.0\ref\MsaProject.Domain.dll

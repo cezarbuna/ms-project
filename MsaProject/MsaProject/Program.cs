@@ -18,7 +18,7 @@ builder.Services.AddSingleton<ISingletonService, SingletonService>();
 
 builder.Services.AddDbContext<MsaProjectDbContext>(options =>
         options.UseSqlServer(builder.Configuration
-        .GetConnectionString(@"Server=DESKTOP-DLVFJ7V\SQLEXPRESS;Database=Database1;Trusted_Connection=True;")));
+        .GetConnectionString(@"Server=DESKTOP-FOFN1JI;Database=Database1;Trusted_Connection=True;")));
 
 //builder.Services.AddMediatR(typeof(Program));
 //builder.Services.AddAutoMapper(typeof(Program));

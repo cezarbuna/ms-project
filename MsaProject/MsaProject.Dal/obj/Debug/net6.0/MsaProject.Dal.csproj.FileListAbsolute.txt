@@ -15,3 +15,20 @@ C:\Users\win 10\OneDrive\Desktop\ms-project\MsaProject\MsaProject.Dal\obj\Debug\
 C:\Users\win 10\OneDrive\Desktop\ms-project\MsaProject\MsaProject.Dal\obj\Debug\net6.0\MsaProject.Dal.pdb
 C:\Users\win 10\OneDrive\Desktop\ms-project\MsaProject\MsaProject.Dal\obj\Debug\net6.0\MsaProject.Dal.genruntimeconfig.cache
 C:\Users\win 10\OneDrive\Desktop\ms-project\MsaProject\MsaProject.Dal\obj\Debug\net6.0\ref\MsaProject.Dal.dll
+C:\Users\Mihai\Source\Repos\ms-project\MsaProject\MsaProject.Dal\bin\Debug\net6.0\MsaProject.Dal.deps.json
+C:\Users\Mihai\Source\Repos\ms-project\MsaProject\MsaProject.Dal\bin\Debug\net6.0\MsaProject.Dal.runtimeconfig.json
+C:\Users\Mihai\Source\Repos\ms-project\MsaProject\MsaProject.Dal\bin\Debug\net6.0\MsaProject.Dal.dll
+C:\Users\Mihai\Source\Repos\ms-project\MsaProject\MsaProject.Dal\bin\Debug\net6.0\MsaProject.Dal.pdb
+C:\Users\Mihai\Source\Repos\ms-project\MsaProject\MsaProject.Dal\bin\Debug\net6.0\MsaProject.Domain.dll
+C:\Users\Mihai\Source\Repos\ms-project\MsaProject\MsaProject.Dal\bin\Debug\net6.0\MsaProject.Domain.pdb
+C:\Users\Mihai\Source\Repos\ms-project\MsaProject\MsaProject.Dal\obj\Debug\net6.0\MsaProject.Dal.csproj.AssemblyReference.cache
+C:\Users\Mihai\Source\Repos\ms-project\MsaProject\MsaProject.Dal\obj\Debug\net6.0\MsaProject.Dal.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mihai\Source\Repos\ms-project\MsaProject\MsaProject.Dal\obj\Debug\net6.0\MsaProject.Dal.AssemblyInfoInputs.cache
+C:\Users\Mihai\Source\Repos\ms-project\MsaProject\MsaProject.Dal\obj\Debug\net6.0\MsaProject.Dal.AssemblyInfo.cs
+C:\Users\Mihai\Source\Repos\ms-project\MsaProject\MsaProject.Dal\obj\Debug\net6.0\MsaProject.Dal.csproj.CoreCompileInputs.cache
+C:\Users\Mihai\Source\Repos\ms-project\MsaProject\MsaProject.Dal\obj\Debug\net6.0\MsaProject.Dal.csproj.CopyComplete
+C:\Users\Mihai\Source\Repos\ms-project\MsaProject\MsaProject.Dal\obj\Debug\net6.0\MsaProject.Dal.dll
+C:\Users\Mihai\Source\Repos\ms-project\MsaProject\MsaProject.Dal\obj\Debug\net6.0\refint\MsaProject.Dal.dll
+C:\Users\Mihai\Source\Repos\ms-project\MsaProject\MsaProject.Dal\obj\Debug\net6.0\MsaProject.Dal.pdb
+C:\Users\Mihai\Source\Repos\ms-project\MsaProject\MsaProject.Dal\obj\Debug\net6.0\MsaProject.Dal.genruntimeconfig.cache
+C:\Users\Mihai\Source\Repos\ms-project\MsaProject\MsaProject.Dal\obj\Debug\net6.0\ref\MsaProject.Dal.dll
