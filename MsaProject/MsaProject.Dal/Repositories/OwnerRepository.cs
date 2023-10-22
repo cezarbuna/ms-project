@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MsaProject.Domain;
+using MsaProject.Domain.IRepositories;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +8,10 @@ using System.Threading.Tasks;
 
 namespace MsaProject.Dal.Repositories
 {
-    internal class Owner
+    public class OwnerRepository : GenericRepository<Owner>, IOwnerRepository
     {
+        public OwnerRepository(MsaProjectDbContext context) : base(context)
+        {
+        }
     }
 }
