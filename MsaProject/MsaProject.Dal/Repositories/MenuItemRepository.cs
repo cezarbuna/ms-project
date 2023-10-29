@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace MsaProject.Dal.Repositories
 {
-    public class MenuItemRepository : GenericRepository<MenuItem>, IMenuRepository
+    public class MenuItemRepository : GenericRepository<MenuItem>, IMenuItemRepository
     {
         public MenuItemRepository(MsaProjectDbContext context) : base(context)
         {

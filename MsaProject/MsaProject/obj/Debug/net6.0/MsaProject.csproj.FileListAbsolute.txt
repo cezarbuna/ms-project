@@ -88,7 +88,6 @@ C:\Users\win 10\OneDrive\Desktop\ms-project\MsaProject\MsaProject\bin\Debug\net6
 C:\Users\win 10\OneDrive\Desktop\ms-project\MsaProject\MsaProject\bin\Debug\net6.0\AppSettings.dll
 C:\Users\win 10\OneDrive\Desktop\ms-project\MsaProject\MsaProject\bin\Debug\net6.0\MediatR.dll
 C:\Users\win 10\OneDrive\Desktop\ms-project\MsaProject\MsaProject\bin\Debug\net6.0\MediatR.Contracts.dll
-C:\Users\win 10\OneDrive\Desktop\ms-project\MsaProject\MsaProject\bin\Debug\net6.0\MediatR.Extensions.Microsoft.DependencyInjection.dll
 C:\Users\win 10\OneDrive\Desktop\ms-project\MsaProject\MsaProject\bin\Debug\net6.0\Microsoft.AspNetCore.JsonPatch.dll
 C:\Users\win 10\OneDrive\Desktop\ms-project\MsaProject\MsaProject\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
 C:\Users\win 10\OneDrive\Desktop\ms-project\MsaProject\MsaProject\bin\Debug\net6.0\Microsoft.AspNetCore.Razor.Language.dll
@@ -227,3 +226,4 @@ C:\Users\Mihai\Source\Repos\ms-project\MsaProject\MsaProject\obj\Debug\net6.0\re
 C:\Users\Mihai\Source\Repos\ms-project\MsaProject\MsaProject\obj\Debug\net6.0\MsaProject.pdb
 C:\Users\Mihai\Source\Repos\ms-project\MsaProject\MsaProject\obj\Debug\net6.0\MsaProject.genruntimeconfig.cache
 C:\Users\Mihai\Source\Repos\ms-project\MsaProject\MsaProject\obj\Debug\net6.0\ref\MsaProject.dll
+C:\Users\win 10\OneDrive\Desktop\ms-project\MsaProject\MsaProject\bin\Debug\net6.0\MediatR.Extensions.Microsoft.DependencyInjection.dll

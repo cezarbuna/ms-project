@@ -1,6 +1,10 @@
 using MediatR;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using MsaProject.Application.Commands.CustomerCommands;
 using MsaProject.Dal;
+using MsaProject.Dal.Repositories;
+using MsaProject.Domain.IRepositories;
 using MsaProject.Services;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -16,12 +20,17 @@ builder.Services.AddScoped<IScopedService, ScopedService>();
 builder.Services.AddTransient<ITransientService, TransientService>();
 builder.Services.AddSingleton<ISingletonService, SingletonService>();
 
+builder.Services.AddScoped<ICustomerRepository, CustomerRepository>();
+
 builder.Services.AddDbContext<MsaProjectDbContext>(options =>
         options.UseSqlServer(builder.Configuration
-        .GetConnectionString(@"Server=DESKTOP-FOFN1JI;Database=Database1;Trusted_Connection=True;")));
+        .GetConnectionString(@"Server=DESKTOP-DLVFJ7V\SQLEXPRESS;Database=Database1;Trusted_Connection=True;TrustServerCertificate=True;")));
 
-//builder.Services.AddMediatR(typeof(Program));
-//builder.Services.AddAutoMapper(typeof(Program));
+builder.Services.AddMediatR(typeof(CreateCustomerCommand));
+
+builder.Services.AddMediatR(typeof(Program));
+builder.Services.AddAutoMapper(typeof(Program));
+
 
 var app = builder.Build();
 
