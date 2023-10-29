@@ -7,10 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Commands\" />
-    <Folder Include="CommandHandlers\" />
-    <Folder Include="QueryHandlers\" />
-    <Folder Include="Queries\" />
+    <PackageReference Include="MediatR" Version="11.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MsaProject.Domain\MsaProject.Domain.csproj" />
   </ItemGroup>
 
 </Project>

@@ -34,7 +34,7 @@ namespace MsaProject.Dal.Repositories
         public IEnumerable<TEntity> FindAll(Expression<Func<TEntity, bool>>? predicate = null)
         {
             if (predicate == null)
-                return dbSet.Where(predicate).ToList();
+                return dbSet.ToList();
 
             return dbSet.Where(predicate).ToList();
         }
