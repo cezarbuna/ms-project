@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using MsaProject.Dal.EntityTypeConfigrations;
 using MsaProject.Domain;
 using System;
 using System.Collections.Generic;
@@ -29,10 +30,9 @@ namespace MsaProject.Dal
                 b => b.MigrationsAssembly("MsaProject.Dal"))
                 .EnableSensitiveDataLogging();
         }
-        //protected override void OnModelCreating(ModelBuilder modelBuilder)
-        //{
-        //    //modelBuilder.ApplyConfiguration(new TradeOfferEntityTypeConfiguration());
-        //    throw new NotImplementedException();
-        //}
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.ApplyConfiguration(new MenuRestaurantEntityConfiguration());
+        }
     }
 }
