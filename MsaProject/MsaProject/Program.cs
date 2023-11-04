@@ -23,6 +23,11 @@ builder.Services.AddSingleton<ISingletonService, SingletonService>();
 
 builder.Services.AddScoped<ICustomerRepository, CustomerRepository>();
 builder.Services.AddScoped<IMenuItemRepository, MenuItemRepository>();
+builder.Services.AddScoped<IMenuRepository, MenuRepository>();
+builder.Services.AddScoped<IRestaurantRepository, RestaurantRepository>();
+builder.Services.AddScoped<IOwnerRepository, OwnerRepository>();
+builder.Services.AddScoped<ITableRepository, TableRepository>();
+builder.Services.AddScoped<IReservationRepository, ReservationRepository>();
 
 builder.Services.AddDbContext<MsaProjectDbContext>(options =>
         options.UseSqlServer(builder.Configuration

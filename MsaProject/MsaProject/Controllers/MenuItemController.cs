@@ -51,6 +51,19 @@ namespace MsaProject.Controllers
             var foundMenuItem = _mapper.Map<MenuItemGetDto>(menuItem);
             return Ok(foundMenuItem);
         }
+        [HttpGet]
+        [Route("get-all-menu-items-by-menu-id/{menuId}")]
+        public async Task<IActionResult> GetAllMenuItemsByMenuId(Guid menuId)
+        {
+            var query = new GetAllByMenuIdQuery { MenuId = menuId };
+            var menuItems = await _mediator.Send(query);
+
+            if (menuItems.Count == 0)
+                return NotFound();
+
+            var foundMenuItems = _mapper.Map<List<MenuItemGetDto>>(menuItems);
+            return Ok(foundMenuItems);
+        }
         [HttpDelete]
         [Route("delete-menu-item/{menuItemId}")]
         public async Task<IActionResult> DeleteMenuItem(Guid menuItemId)
