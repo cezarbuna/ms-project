@@ -58,7 +58,13 @@ namespace MsaProject.Dal.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<Guid>("RestaurantId")
+                        .HasColumnType("uniqueidentifier");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("RestaurantId")
+                        .IsUnique();
 
                     b.ToTable("Menus");
                 });
@@ -163,9 +169,6 @@ namespace MsaProject.Dal.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("MenuId")
-                        .IsUnique();
-
                     b.HasIndex("OwnerId");
 
                     b.ToTable("Restaurants");
@@ -188,6 +191,17 @@ namespace MsaProject.Dal.Migrations
                     b.HasIndex("RestaurantId");
 
                     b.ToTable("Tables");
+                });
+
+            modelBuilder.Entity("MsaProject.Domain.Menu", b =>
+                {
+                    b.HasOne("MsaProject.Domain.Restaurant", "Restaurant")
+                        .WithOne("Menu")
+                        .HasForeignKey("MsaProject.Domain.Menu", "RestaurantId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Restaurant");
                 });
 
             modelBuilder.Entity("MsaProject.Domain.MenuItem", b =>
@@ -222,17 +236,9 @@ namespace MsaProject.Dal.Migrations
 
             modelBuilder.Entity("MsaProject.Domain.Restaurant", b =>
                 {
-                    b.HasOne("MsaProject.Domain.Menu", "Menu")
-                        .WithOne("Restaurant")
-                        .HasForeignKey("MsaProject.Domain.Restaurant", "MenuId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("MsaProject.Domain.Owner", null)
                         .WithMany("Restaurants")
                         .HasForeignKey("OwnerId");
-
-                    b.Navigation("Menu");
                 });
 
             modelBuilder.Entity("MsaProject.Domain.Table", b =>
@@ -249,9 +255,6 @@ namespace MsaProject.Dal.Migrations
             modelBuilder.Entity("MsaProject.Domain.Menu", b =>
                 {
                     b.Navigation("MenuItems");
-
-                    b.Navigation("Restaurant")
-                        .IsRequired();
                 });
 
             modelBuilder.Entity("MsaProject.Domain.Owner", b =>
@@ -261,6 +264,9 @@ namespace MsaProject.Dal.Migrations
 
             modelBuilder.Entity("MsaProject.Domain.Restaurant", b =>
                 {
+                    b.Navigation("Menu")
+                        .IsRequired();
+
                     b.Navigation("Tables");
                 });
 #pragma warning restore 612, 618

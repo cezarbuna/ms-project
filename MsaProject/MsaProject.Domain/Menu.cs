@@ -8,6 +8,7 @@ namespace MsaProject.Domain
 {
     public class Menu : Entity
     {
+        public Guid RestaurantId { get; set; }
         public Restaurant Restaurant { get; set; }
         public ICollection<MenuItem> MenuItems { get; set; }
     }
