@@ -32,7 +32,7 @@ builder.Services.AddScoped<IReservationRepository, ReservationRepository>();
 
 builder.Services.AddDbContext<MsaProjectDbContext>(options =>
         options.UseSqlServer(builder.Configuration
-        .GetConnectionString(@"Server=DESKTOP-DLVFJ7V\SQLEXPRESS;Database=Database1;Trusted_Connection=True;TrustServerCertificate=True;")));
+        .GetConnectionString(@"Server=DESKTOP-FOFN1JI;Database=Database1;Trusted_Connection=True;TrustServerCertificate=True;")));
 
 builder.Services.AddMediatR(typeof(CreateCustomerCommand));
 builder.Services.AddMediatR(typeof(CreateMenuItemCommand));
