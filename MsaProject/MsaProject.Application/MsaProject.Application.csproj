@@ -14,10 +14,4 @@
     <ProjectReference Include="..\MsaProject.Domain\MsaProject.Domain.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="CommandHandlers\MenuCommandHandlers\" />
-    <Folder Include="Queries\MenuQueries\" />
-    <Folder Include="QueryHandlers\MenuQueryHandlers\" />
-  </ItemGroup>
-
 </Project>

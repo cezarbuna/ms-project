@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "GYN9WaNAgfJ5Gbg5FrLb8YPLF6oxJhRt5ZgqlWBWSHk/a9Y9ElCoLXxABUmGXVfMF3C9Bl/OuREH0WiLPfQruw==",
+  "dgSpecHash": "cByyurcwSaAxl8yRX0G1jskglnUsoX7+o9MwPHl99NtdQv3g2k1ajN6Z5Z/rz5aZegV3fsPiy3eCTNMw0Zh9Ag==",
   "success": true,
-  "projectFilePath": "C:\\Users\\win 10\\OneDrive\\Desktop\\ms-project\\MsaProject\\MsaProject\\MsaProject.csproj",
+  "projectFilePath": "D:\\Desktop\\ms-project\\MsaProject\\MsaProject\\MsaProject.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\win 10\\.nuget\\packages\\applicationsettings\\2.3.0\\applicationsettings.2.3.0.nupkg.sha512",
     "C:\\Users\\win 10\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",

@@ -26,3 +26,17 @@ C:\Users\Mihai\Source\Repos\ms-project\MsaProject\MsaProject.Domain\obj\Debug\ne
 C:\Users\Mihai\Source\Repos\ms-project\MsaProject\MsaProject.Domain\obj\Debug\net6.0\MsaProject.Domain.pdb
 C:\Users\Mihai\Source\Repos\ms-project\MsaProject\MsaProject.Domain\obj\Debug\net6.0\MsaProject.Domain.genruntimeconfig.cache
 C:\Users\Mihai\Source\Repos\ms-project\MsaProject\MsaProject.Domain\obj\Debug\net6.0\ref\MsaProject.Domain.dll
+D:\Desktop\ms-project\MsaProject\MsaProject.Domain\bin\Debug\net6.0\MsaProject.Domain.deps.json
+D:\Desktop\ms-project\MsaProject\MsaProject.Domain\bin\Debug\net6.0\MsaProject.Domain.runtimeconfig.json
+D:\Desktop\ms-project\MsaProject\MsaProject.Domain\bin\Debug\net6.0\MsaProject.Domain.dll
+D:\Desktop\ms-project\MsaProject\MsaProject.Domain\bin\Debug\net6.0\MsaProject.Domain.pdb
+D:\Desktop\ms-project\MsaProject\MsaProject.Domain\obj\Debug\net6.0\MsaProject.Domain.csproj.AssemblyReference.cache
+D:\Desktop\ms-project\MsaProject\MsaProject.Domain\obj\Debug\net6.0\MsaProject.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Desktop\ms-project\MsaProject\MsaProject.Domain\obj\Debug\net6.0\MsaProject.Domain.AssemblyInfoInputs.cache
+D:\Desktop\ms-project\MsaProject\MsaProject.Domain\obj\Debug\net6.0\MsaProject.Domain.AssemblyInfo.cs
+D:\Desktop\ms-project\MsaProject\MsaProject.Domain\obj\Debug\net6.0\MsaProject.Domain.csproj.CoreCompileInputs.cache
+D:\Desktop\ms-project\MsaProject\MsaProject.Domain\obj\Debug\net6.0\MsaProject.Domain.dll
+D:\Desktop\ms-project\MsaProject\MsaProject.Domain\obj\Debug\net6.0\refint\MsaProject.Domain.dll
+D:\Desktop\ms-project\MsaProject\MsaProject.Domain\obj\Debug\net6.0\MsaProject.Domain.pdb
+D:\Desktop\ms-project\MsaProject\MsaProject.Domain\obj\Debug\net6.0\MsaProject.Domain.genruntimeconfig.cache
+D:\Desktop\ms-project\MsaProject\MsaProject.Domain\obj\Debug\net6.0\ref\MsaProject.Domain.dll

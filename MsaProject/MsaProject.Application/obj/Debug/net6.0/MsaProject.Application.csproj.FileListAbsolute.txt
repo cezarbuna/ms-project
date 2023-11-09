@@ -24,3 +24,18 @@ C:\Users\Mihai\Source\Repos\ms-project\MsaProject\MsaProject.Application\obj\Deb
 C:\Users\win 10\OneDrive\Desktop\ms-project\MsaProject\MsaProject.Application\bin\Debug\net6.0\MsaProject.Domain.dll
 C:\Users\win 10\OneDrive\Desktop\ms-project\MsaProject\MsaProject.Application\bin\Debug\net6.0\MsaProject.Domain.pdb
 C:\Users\win 10\OneDrive\Desktop\ms-project\MsaProject\MsaProject.Application\obj\Debug\net6.0\MsaProject.Application.csproj.CopyComplete
+D:\Desktop\ms-project\MsaProject\MsaProject.Application\bin\Debug\net6.0\MsaProject.Application.deps.json
+D:\Desktop\ms-project\MsaProject\MsaProject.Application\bin\Debug\net6.0\MsaProject.Application.dll
+D:\Desktop\ms-project\MsaProject\MsaProject.Application\bin\Debug\net6.0\MsaProject.Application.pdb
+D:\Desktop\ms-project\MsaProject\MsaProject.Application\bin\Debug\net6.0\MsaProject.Domain.dll
+D:\Desktop\ms-project\MsaProject\MsaProject.Application\bin\Debug\net6.0\MsaProject.Domain.pdb
+D:\Desktop\ms-project\MsaProject\MsaProject.Application\obj\Debug\net6.0\MsaProject.Application.csproj.AssemblyReference.cache
+D:\Desktop\ms-project\MsaProject\MsaProject.Application\obj\Debug\net6.0\MsaProject.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\Desktop\ms-project\MsaProject\MsaProject.Application\obj\Debug\net6.0\MsaProject.Application.AssemblyInfoInputs.cache
+D:\Desktop\ms-project\MsaProject\MsaProject.Application\obj\Debug\net6.0\MsaProject.Application.AssemblyInfo.cs
+D:\Desktop\ms-project\MsaProject\MsaProject.Application\obj\Debug\net6.0\MsaProject.Application.csproj.CoreCompileInputs.cache
+D:\Desktop\ms-project\MsaProject\MsaProject.Application\obj\Debug\net6.0\MsaProject.Application.csproj.CopyComplete
+D:\Desktop\ms-project\MsaProject\MsaProject.Application\obj\Debug\net6.0\MsaProject.Application.dll
+D:\Desktop\ms-project\MsaProject\MsaProject.Application\obj\Debug\net6.0\refint\MsaProject.Application.dll
+D:\Desktop\ms-project\MsaProject\MsaProject.Application\obj\Debug\net6.0\MsaProject.Application.pdb
+D:\Desktop\ms-project\MsaProject\MsaProject.Application\obj\Debug\net6.0\ref\MsaProject.Application.dll

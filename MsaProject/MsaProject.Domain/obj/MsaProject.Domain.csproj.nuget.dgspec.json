@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\win 10\\OneDrive\\Desktop\\ms-project\\MsaProject\\MsaProject.Domain\\MsaProject.Domain.csproj": {}
+    "D:\\Desktop\\ms-project\\MsaProject\\MsaProject.Domain\\MsaProject.Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\win 10\\OneDrive\\Desktop\\ms-project\\MsaProject\\MsaProject.Domain\\MsaProject.Domain.csproj": {
+    "D:\\Desktop\\ms-project\\MsaProject\\MsaProject.Domain\\MsaProject.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\win 10\\OneDrive\\Desktop\\ms-project\\MsaProject\\MsaProject.Domain\\MsaProject.Domain.csproj",
+        "projectUniqueName": "D:\\Desktop\\ms-project\\MsaProject\\MsaProject.Domain\\MsaProject.Domain.csproj",
         "projectName": "MsaProject.Domain",
-        "projectPath": "C:\\Users\\win 10\\OneDrive\\Desktop\\ms-project\\MsaProject\\MsaProject.Domain\\MsaProject.Domain.csproj",
+        "projectPath": "D:\\Desktop\\ms-project\\MsaProject\\MsaProject.Domain\\MsaProject.Domain.csproj",
         "packagesPath": "C:\\Users\\win 10\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\win 10\\OneDrive\\Desktop\\ms-project\\MsaProject\\MsaProject.Domain\\obj\\",
+        "outputPath": "D:\\Desktop\\ms-project\\MsaProject\\MsaProject.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

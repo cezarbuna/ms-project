@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\win 10\\OneDrive\\Desktop\\ms-project\\MsaProject\\MsaProject\\MsaProject.csproj": {}
+    "D:\\Desktop\\ms-project\\MsaProject\\MsaProject\\MsaProject.csproj": {}
   },
   "projects": {
-    "C:\\Users\\win 10\\OneDrive\\Desktop\\ms-project\\MsaProject\\MsaProject.Application\\MsaProject.Application.csproj": {
+    "D:\\Desktop\\ms-project\\MsaProject\\MsaProject.Application\\MsaProject.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\win 10\\OneDrive\\Desktop\\ms-project\\MsaProject\\MsaProject.Application\\MsaProject.Application.csproj",
+        "projectUniqueName": "D:\\Desktop\\ms-project\\MsaProject\\MsaProject.Application\\MsaProject.Application.csproj",
         "projectName": "MsaProject.Application",
-        "projectPath": "C:\\Users\\win 10\\OneDrive\\Desktop\\ms-project\\MsaProject\\MsaProject.Application\\MsaProject.Application.csproj",
+        "projectPath": "D:\\Desktop\\ms-project\\MsaProject\\MsaProject.Application\\MsaProject.Application.csproj",
         "packagesPath": "C:\\Users\\win 10\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\win 10\\OneDrive\\Desktop\\ms-project\\MsaProject\\MsaProject.Application\\obj\\",
+        "outputPath": "D:\\Desktop\\ms-project\\MsaProject\\MsaProject.Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -32,8 +32,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\win 10\\OneDrive\\Desktop\\ms-project\\MsaProject\\MsaProject.Domain\\MsaProject.Domain.csproj": {
-                "projectPath": "C:\\Users\\win 10\\OneDrive\\Desktop\\ms-project\\MsaProject\\MsaProject.Domain\\MsaProject.Domain.csproj"
+              "D:\\Desktop\\ms-project\\MsaProject\\MsaProject.Domain\\MsaProject.Domain.csproj": {
+                "projectPath": "D:\\Desktop\\ms-project\\MsaProject\\MsaProject.Domain\\MsaProject.Domain.csproj"
               }
             }
           }
@@ -72,14 +72,14 @@
         }
       }
     },
-    "C:\\Users\\win 10\\OneDrive\\Desktop\\ms-project\\MsaProject\\MsaProject.Dal\\MsaProject.Dal.csproj": {
+    "D:\\Desktop\\ms-project\\MsaProject\\MsaProject.Dal\\MsaProject.Dal.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\win 10\\OneDrive\\Desktop\\ms-project\\MsaProject\\MsaProject.Dal\\MsaProject.Dal.csproj",
+        "projectUniqueName": "D:\\Desktop\\ms-project\\MsaProject\\MsaProject.Dal\\MsaProject.Dal.csproj",
         "projectName": "MsaProject.Dal",
-        "projectPath": "C:\\Users\\win 10\\OneDrive\\Desktop\\ms-project\\MsaProject\\MsaProject.Dal\\MsaProject.Dal.csproj",
+        "projectPath": "D:\\Desktop\\ms-project\\MsaProject\\MsaProject.Dal\\MsaProject.Dal.csproj",
         "packagesPath": "C:\\Users\\win 10\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\win 10\\OneDrive\\Desktop\\ms-project\\MsaProject\\MsaProject.Dal\\obj\\",
+        "outputPath": "D:\\Desktop\\ms-project\\MsaProject\\MsaProject.Dal\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -100,8 +100,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\win 10\\OneDrive\\Desktop\\ms-project\\MsaProject\\MsaProject.Domain\\MsaProject.Domain.csproj": {
-                "projectPath": "C:\\Users\\win 10\\OneDrive\\Desktop\\ms-project\\MsaProject\\MsaProject.Domain\\MsaProject.Domain.csproj"
+              "D:\\Desktop\\ms-project\\MsaProject\\MsaProject.Domain\\MsaProject.Domain.csproj": {
+                "projectPath": "D:\\Desktop\\ms-project\\MsaProject\\MsaProject.Domain\\MsaProject.Domain.csproj"
               }
             }
           }
@@ -156,14 +156,14 @@
         }
       }
     },
-    "C:\\Users\\win 10\\OneDrive\\Desktop\\ms-project\\MsaProject\\MsaProject.Domain\\MsaProject.Domain.csproj": {
+    "D:\\Desktop\\ms-project\\MsaProject\\MsaProject.Domain\\MsaProject.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\win 10\\OneDrive\\Desktop\\ms-project\\MsaProject\\MsaProject.Domain\\MsaProject.Domain.csproj",
+        "projectUniqueName": "D:\\Desktop\\ms-project\\MsaProject\\MsaProject.Domain\\MsaProject.Domain.csproj",
         "projectName": "MsaProject.Domain",
-        "projectPath": "C:\\Users\\win 10\\OneDrive\\Desktop\\ms-project\\MsaProject\\MsaProject.Domain\\MsaProject.Domain.csproj",
+        "projectPath": "D:\\Desktop\\ms-project\\MsaProject\\MsaProject.Domain\\MsaProject.Domain.csproj",
         "packagesPath": "C:\\Users\\win 10\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\win 10\\OneDrive\\Desktop\\ms-project\\MsaProject\\MsaProject.Domain\\obj\\",
+        "outputPath": "D:\\Desktop\\ms-project\\MsaProject\\MsaProject.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -236,14 +236,14 @@
         }
       }
     },
-    "C:\\Users\\win 10\\OneDrive\\Desktop\\ms-project\\MsaProject\\MsaProject\\MsaProject.csproj": {
+    "D:\\Desktop\\ms-project\\MsaProject\\MsaProject\\MsaProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\win 10\\OneDrive\\Desktop\\ms-project\\MsaProject\\MsaProject\\MsaProject.csproj",
+        "projectUniqueName": "D:\\Desktop\\ms-project\\MsaProject\\MsaProject\\MsaProject.csproj",
         "projectName": "MsaProject",
-        "projectPath": "C:\\Users\\win 10\\OneDrive\\Desktop\\ms-project\\MsaProject\\MsaProject\\MsaProject.csproj",
+        "projectPath": "D:\\Desktop\\ms-project\\MsaProject\\MsaProject\\MsaProject.csproj",
         "packagesPath": "C:\\Users\\win 10\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\win 10\\OneDrive\\Desktop\\ms-project\\MsaProject\\MsaProject\\obj\\",
+        "outputPath": "D:\\Desktop\\ms-project\\MsaProject\\MsaProject\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -264,14 +264,14 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\win 10\\OneDrive\\Desktop\\ms-project\\MsaProject\\MsaProject.Application\\MsaProject.Application.csproj": {
-                "projectPath": "C:\\Users\\win 10\\OneDrive\\Desktop\\ms-project\\MsaProject\\MsaProject.Application\\MsaProject.Application.csproj"
+              "D:\\Desktop\\ms-project\\MsaProject\\MsaProject.Application\\MsaProject.Application.csproj": {
+                "projectPath": "D:\\Desktop\\ms-project\\MsaProject\\MsaProject.Application\\MsaProject.Application.csproj"
               },
-              "C:\\Users\\win 10\\OneDrive\\Desktop\\ms-project\\MsaProject\\MsaProject.Dal\\MsaProject.Dal.csproj": {
-                "projectPath": "C:\\Users\\win 10\\OneDrive\\Desktop\\ms-project\\MsaProject\\MsaProject.Dal\\MsaProject.Dal.csproj"
+              "D:\\Desktop\\ms-project\\MsaProject\\MsaProject.Dal\\MsaProject.Dal.csproj": {
+                "projectPath": "D:\\Desktop\\ms-project\\MsaProject\\MsaProject.Dal\\MsaProject.Dal.csproj"
               },
-              "C:\\Users\\win 10\\OneDrive\\Desktop\\ms-project\\MsaProject\\MsaProject.Domain\\MsaProject.Domain.csproj": {
-                "projectPath": "C:\\Users\\win 10\\OneDrive\\Desktop\\ms-project\\MsaProject\\MsaProject.Domain\\MsaProject.Domain.csproj"
+              "D:\\Desktop\\ms-project\\MsaProject\\MsaProject.Domain\\MsaProject.Domain.csproj": {
+                "projectPath": "D:\\Desktop\\ms-project\\MsaProject\\MsaProject.Domain\\MsaProject.Domain.csproj"
               }
             }
           }
