@@ -13,10 +13,12 @@ namespace MsaProject.Application.CommandHandlers.MenuItemCommandHandlers
     public class CreateMenuItemCommandHandler : IRequestHandler<CreateMenuItemCommand, MenuItem>
     {
         private readonly IMenuItemRepository menuItemRepository;
+        private readonly IMenuRepository menuRepository;
 
-        public CreateMenuItemCommandHandler(IMenuItemRepository menuItemRepository)
+        public CreateMenuItemCommandHandler(IMenuItemRepository menuItemRepository, IMenuRepository menuRepository)
         {
             this.menuItemRepository = menuItemRepository;
+            this.menuRepository = menuRepository;
         }
 
         public Task<MenuItem> Handle(CreateMenuItemCommand request, CancellationToken cancellationToken)
@@ -28,10 +30,19 @@ namespace MsaProject.Application.CommandHandlers.MenuItemCommandHandlers
                 MenuId = request.MenuId
             };
 
-            menuItemRepository.Insert(newMenuItem);
-            menuItemRepository.SaveChanges();
+            var menu = menuRepository.GetEntityByID(request.MenuId);
 
-            return Task.FromResult(newMenuItem);
+            if (menu != null)
+            {
+                menu.MenuItems.Add(newMenuItem);
+                menuRepository.Update(menu);
+                menuRepository.SaveChanges();
+                menuItemRepository.Insert(newMenuItem);
+                menuItemRepository.SaveChanges();
+
+                return Task.FromResult(newMenuItem);
+            }
+            return Task.FromResult<MenuItem>(null);
         }
     }
 }

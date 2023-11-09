@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "2A7mby+K1WzU9jERNGvNm3vFKwc2O8xsJGhxSwbBkPx85xj21ujeezB25HEGsblfe2pwuwy1yrbifQfRGrPo4Q==",
+  "dgSpecHash": "3KkN07JyFlFeEWul/xYjsdLLHY5piGvOJjUQWNkqyn1cQVUE8cJ5EHodIBHtTFVT6lEjQgjStNyJh5cs1SmA5Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\win 10\\OneDrive\\Desktop\\ms-project\\MsaProject\\MsaProject.Application\\MsaProject.Application.csproj",
+  "projectFilePath": "D:\\Desktop\\ms-project\\MsaProject\\MsaProject.Application\\MsaProject.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\win 10\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\win 10\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

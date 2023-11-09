@@ -2,6 +2,7 @@ using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using MsaProject.Application.Commands.CustomerCommands;
+using MsaProject.Application.Commands.MenuCommands;
 using MsaProject.Application.Commands.MenuItemCommands;
 using MsaProject.Dal;
 using MsaProject.Dal.Repositories;
@@ -35,6 +36,7 @@ builder.Services.AddDbContext<MsaProjectDbContext>(options =>
 
 builder.Services.AddMediatR(typeof(CreateCustomerCommand));
 builder.Services.AddMediatR(typeof(CreateMenuItemCommand));
+builder.Services.AddMediatR(typeof(CreateMenuCommand));
 
 builder.Services.AddMediatR(typeof(Program));
 builder.Services.AddAutoMapper(typeof(Program));
