@@ -1,3 +1,5 @@
+using MsaProject.Domain;
+
 public class RestaurantGetDto
 {
     public string Name { get; set; }

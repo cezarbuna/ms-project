@@ -34,11 +34,15 @@ namespace MsaProject.Controllers
                 Username = newCustomer.Username,
                 FullName = newCustomer.FullName
             };
+            var customer = await _mediator.Send(command);
 
-            var customer = _mapper.Map<CustomerPostDto, Customer>(newCustomer);
-            var createdCustomer = await _mediator.Send(command);
+            if(customer != null)
+            {
+                var createdCustomer = _mapper.Map<CustomerGetDto>(customer);
+                return CreatedAtAction(nameof(GetCustomerById), new { customerId = customer.Id }, createdCustomer);
+            }
 
-            return CreatedAtAction(nameof(GetCustomerById), new { customerId = customer.Id }, createdCustomer);
+            return StatusCode(StatusCodes.Status500InternalServerError, "Error creating new customer");
         }
         [HttpGet]
         [Route("get-customer-by-id/{customerId}")]

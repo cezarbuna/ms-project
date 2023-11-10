@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Mihai\\Source\\Repos\\ms-project1\\MsaProject\\MsaProject\\MsaProject.csproj": {}
+    "D:\\Desktop\\ms-project\\MsaProject\\MsaProject\\MsaProject.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Mihai\\Source\\Repos\\ms-project1\\MsaProject\\MsaProject.Application\\MsaProject.Application.csproj": {
+    "D:\\Desktop\\ms-project\\MsaProject\\MsaProject.Application\\MsaProject.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Mihai\\Source\\Repos\\ms-project1\\MsaProject\\MsaProject.Application\\MsaProject.Application.csproj",
+        "projectUniqueName": "D:\\Desktop\\ms-project\\MsaProject\\MsaProject.Application\\MsaProject.Application.csproj",
         "projectName": "MsaProject.Application",
-        "projectPath": "C:\\Users\\Mihai\\Source\\Repos\\ms-project1\\MsaProject\\MsaProject.Application\\MsaProject.Application.csproj",
-        "packagesPath": "C:\\Users\\Mihai\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Mihai\\Source\\Repos\\ms-project1\\MsaProject\\MsaProject.Application\\obj\\",
+        "projectPath": "D:\\Desktop\\ms-project\\MsaProject\\MsaProject.Application\\MsaProject.Application.csproj",
+        "packagesPath": "C:\\Users\\win 10\\.nuget\\packages\\",
+        "outputPath": "D:\\Desktop\\ms-project\\MsaProject\\MsaProject.Application\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Mihai\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\win 10\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +32,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Mihai\\Source\\Repos\\ms-project1\\MsaProject\\MsaProject.Domain\\MsaProject.Domain.csproj": {
-                "projectPath": "C:\\Users\\Mihai\\Source\\Repos\\ms-project1\\MsaProject\\MsaProject.Domain\\MsaProject.Domain.csproj"
+              "D:\\Desktop\\ms-project\\MsaProject\\MsaProject.Domain\\MsaProject.Domain.csproj": {
+                "projectPath": "D:\\Desktop\\ms-project\\MsaProject\\MsaProject.Domain\\MsaProject.Domain.csproj"
               }
             }
           }
@@ -55,8 +59,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -65,21 +68,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Mihai\\Source\\Repos\\ms-project1\\MsaProject\\MsaProject.Dal\\MsaProject.Dal.csproj": {
+    "D:\\Desktop\\ms-project\\MsaProject\\MsaProject.Dal\\MsaProject.Dal.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Mihai\\Source\\Repos\\ms-project1\\MsaProject\\MsaProject.Dal\\MsaProject.Dal.csproj",
+        "projectUniqueName": "D:\\Desktop\\ms-project\\MsaProject\\MsaProject.Dal\\MsaProject.Dal.csproj",
         "projectName": "MsaProject.Dal",
-        "projectPath": "C:\\Users\\Mihai\\Source\\Repos\\ms-project1\\MsaProject\\MsaProject.Dal\\MsaProject.Dal.csproj",
-        "packagesPath": "C:\\Users\\Mihai\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Mihai\\Source\\Repos\\ms-project1\\MsaProject\\MsaProject.Dal\\obj\\",
+        "projectPath": "D:\\Desktop\\ms-project\\MsaProject\\MsaProject.Dal\\MsaProject.Dal.csproj",
+        "packagesPath": "C:\\Users\\win 10\\.nuget\\packages\\",
+        "outputPath": "D:\\Desktop\\ms-project\\MsaProject\\MsaProject.Dal\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Mihai\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\win 10\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -93,8 +100,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Mihai\\Source\\Repos\\ms-project1\\MsaProject\\MsaProject.Domain\\MsaProject.Domain.csproj": {
-                "projectPath": "C:\\Users\\Mihai\\Source\\Repos\\ms-project1\\MsaProject\\MsaProject.Domain\\MsaProject.Domain.csproj"
+              "D:\\Desktop\\ms-project\\MsaProject\\MsaProject.Domain\\MsaProject.Domain.csproj": {
+                "projectPath": "D:\\Desktop\\ms-project\\MsaProject\\MsaProject.Domain\\MsaProject.Domain.csproj"
               }
             }
           }
@@ -136,8 +143,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -146,21 +152,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Mihai\\Source\\Repos\\ms-project1\\MsaProject\\MsaProject.Domain\\MsaProject.Domain.csproj": {
+    "D:\\Desktop\\ms-project\\MsaProject\\MsaProject.Domain\\MsaProject.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Mihai\\Source\\Repos\\ms-project1\\MsaProject\\MsaProject.Domain\\MsaProject.Domain.csproj",
+        "projectUniqueName": "D:\\Desktop\\ms-project\\MsaProject\\MsaProject.Domain\\MsaProject.Domain.csproj",
         "projectName": "MsaProject.Domain",
-        "projectPath": "C:\\Users\\Mihai\\Source\\Repos\\ms-project1\\MsaProject\\MsaProject.Domain\\MsaProject.Domain.csproj",
-        "packagesPath": "C:\\Users\\Mihai\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Mihai\\Source\\Repos\\ms-project1\\MsaProject\\MsaProject.Domain\\obj\\",
+        "projectPath": "D:\\Desktop\\ms-project\\MsaProject\\MsaProject.Domain\\MsaProject.Domain.csproj",
+        "packagesPath": "C:\\Users\\win 10\\.nuget\\packages\\",
+        "outputPath": "D:\\Desktop\\ms-project\\MsaProject\\MsaProject.Domain\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Mihai\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\win 10\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -213,8 +223,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -223,21 +232,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Mihai\\Source\\Repos\\ms-project1\\MsaProject\\MsaProject\\MsaProject.csproj": {
+    "D:\\Desktop\\ms-project\\MsaProject\\MsaProject\\MsaProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Mihai\\Source\\Repos\\ms-project1\\MsaProject\\MsaProject\\MsaProject.csproj",
+        "projectUniqueName": "D:\\Desktop\\ms-project\\MsaProject\\MsaProject\\MsaProject.csproj",
         "projectName": "MsaProject",
-        "projectPath": "C:\\Users\\Mihai\\Source\\Repos\\ms-project1\\MsaProject\\MsaProject\\MsaProject.csproj",
-        "packagesPath": "C:\\Users\\Mihai\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Mihai\\Source\\Repos\\ms-project1\\MsaProject\\MsaProject\\obj\\",
+        "projectPath": "D:\\Desktop\\ms-project\\MsaProject\\MsaProject\\MsaProject.csproj",
+        "packagesPath": "C:\\Users\\win 10\\.nuget\\packages\\",
+        "outputPath": "D:\\Desktop\\ms-project\\MsaProject\\MsaProject\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Mihai\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\win 10\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -251,14 +264,14 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Mihai\\Source\\Repos\\ms-project1\\MsaProject\\MsaProject.Application\\MsaProject.Application.csproj": {
-                "projectPath": "C:\\Users\\Mihai\\Source\\Repos\\ms-project1\\MsaProject\\MsaProject.Application\\MsaProject.Application.csproj"
+              "D:\\Desktop\\ms-project\\MsaProject\\MsaProject.Application\\MsaProject.Application.csproj": {
+                "projectPath": "D:\\Desktop\\ms-project\\MsaProject\\MsaProject.Application\\MsaProject.Application.csproj"
               },
-              "C:\\Users\\Mihai\\Source\\Repos\\ms-project1\\MsaProject\\MsaProject.Dal\\MsaProject.Dal.csproj": {
-                "projectPath": "C:\\Users\\Mihai\\Source\\Repos\\ms-project1\\MsaProject\\MsaProject.Dal\\MsaProject.Dal.csproj"
+              "D:\\Desktop\\ms-project\\MsaProject\\MsaProject.Dal\\MsaProject.Dal.csproj": {
+                "projectPath": "D:\\Desktop\\ms-project\\MsaProject\\MsaProject.Dal\\MsaProject.Dal.csproj"
               },
-              "C:\\Users\\Mihai\\Source\\Repos\\ms-project1\\MsaProject\\MsaProject.Domain\\MsaProject.Domain.csproj": {
-                "projectPath": "C:\\Users\\Mihai\\Source\\Repos\\ms-project1\\MsaProject\\MsaProject.Domain\\MsaProject.Domain.csproj"
+              "D:\\Desktop\\ms-project\\MsaProject\\MsaProject.Domain\\MsaProject.Domain.csproj": {
+                "projectPath": "D:\\Desktop\\ms-project\\MsaProject\\MsaProject.Domain\\MsaProject.Domain.csproj"
               }
             }
           }
@@ -328,8 +341,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -341,7 +353,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }
