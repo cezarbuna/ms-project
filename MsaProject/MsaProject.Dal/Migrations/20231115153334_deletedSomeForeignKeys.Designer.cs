@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MsaProject.Dal;
 
@@ -11,9 +12,11 @@ using MsaProject.Dal;
 namespace MsaProject.Dal.Migrations
 {
     [DbContext(typeof(MsaProjectDbContext))]
-    partial class MsaProjectDbContextModelSnapshot : ModelSnapshot
+    [Migration("20231115153334_deletedSomeForeignKeys")]
+    partial class deletedSomeForeignKeys
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

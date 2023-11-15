@@ -28,8 +28,7 @@ namespace MsaProject.Application.CommandHandlers.MenuCommandHandlers
             {
                 var newMenu = new Menu
                 {
-                    RestaurantId = request.RestaurantId,
-                    MenuItems = new List<MenuItem>()
+                    RestaurantId = request.RestaurantId
                 };
                 //newMenu.MenuItems = menuItemRepository.FindAll(x => x.MenuId == newMenu.Id).ToList();
 

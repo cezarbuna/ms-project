@@ -34,7 +34,7 @@ namespace MsaProject.Application.CommandHandlers.MenuItemCommandHandlers
 
             if (menu != null)
             {
-                menu.MenuItems.Add(newMenuItem);
+                //menu.MenuItems.Add(newMenuItem);
                 menuRepository.Update(menu);
                 menuRepository.SaveChanges();
                 menuItemRepository.Insert(newMenuItem);
