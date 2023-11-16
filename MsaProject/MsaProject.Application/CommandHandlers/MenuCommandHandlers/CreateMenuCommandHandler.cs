@@ -24,20 +24,19 @@ namespace MsaProject.Application.CommandHandlers.MenuCommandHandlers
 
         public Task<Menu> Handle(CreateMenuCommand request, CancellationToken cancellationToken)
         {
-            if (menuRepository.Any(x => x.Id == request.RestaurantId))
+            if(restaurantRepository.Any(x => x.Id == request.RestaurantId))
             {
-                var newMenu = new Menu
+                var menu = new Menu
                 {
-                    RestaurantId = request.RestaurantId,
-                    MenuItems = new List<MenuItem>()
+                    RestaurantId = request.RestaurantId
                 };
-                //newMenu.MenuItems = menuItemRepository.FindAll(x => x.MenuId == newMenu.Id).ToList();
 
-                menuRepository.Insert(newMenu);
+                menuRepository.Insert(menu);
                 menuRepository.SaveChanges();
 
-                return Task.FromResult(newMenu);
+                return Task.FromResult(menu);
             }
+
             return Task.FromResult<Menu>(null);
 
         }

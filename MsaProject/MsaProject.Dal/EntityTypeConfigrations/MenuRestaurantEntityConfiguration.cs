@@ -11,13 +11,16 @@ namespace MsaProject.Dal.EntityTypeConfigrations
 {
     public class MenuRestaurantEntityConfiguration : IEntityTypeConfiguration<Restaurant>
     {
+        //public void Configure(EntityTypeBuilder<Restaurant> builder)
+        //{
+        //    builder
+        //    .HasOne(r => r.Menu)
+        //    .WithOne(m => m.Restaurant)
+        //    .HasForeignKey<Menu>(m => m.RestaurantId);
+        //}
         public void Configure(EntityTypeBuilder<Restaurant> builder)
         {
-            builder
-            .HasOne(r => r.Menu)
-            .WithOne(m => m.Restaurant)
-            .HasForeignKey<Menu>(m => m.RestaurantId);
+            throw new NotImplementedException();
         }
-
     }
 }

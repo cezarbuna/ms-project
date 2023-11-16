@@ -26,13 +26,14 @@ namespace MsaProject.Dal
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder
-                .UseSqlServer(@"Server=DESKTOP-FOFN1JI;Database=Database1;Trusted_Connection=True;TrustServerCertificate=True;",
+                .UseSqlServer(@"Server=DESKTOP-DLVFJ7V\SQLEXPRESS;Database=Database1;Trusted_Connection=True;TrustServerCertificate=True;",
                 b => b.MigrationsAssembly("MsaProject.Dal"))
                 .EnableSensitiveDataLogging();
         }
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            modelBuilder.ApplyConfiguration(new MenuRestaurantEntityConfiguration());
-        }
+        //protected override void OnModelCreating(ModelBuilder modelBuilder)
+        //{
+        //    //modelBuilder.ApplyConfiguration(new MenuRestaurantEntityConfiguration());
+        //    throw new NotImplementedException();
+        //}
     }
 }

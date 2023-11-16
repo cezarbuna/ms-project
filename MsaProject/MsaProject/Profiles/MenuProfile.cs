@@ -11,12 +11,10 @@ namespace MsaProject.Profiles
         {
             CreateMap<Menu, MenuGetDto>()
                 .ForMember(m => m.Id, opt => opt.MapFrom(d => d.Id))
-                .ForMember(m => m.RestaurantId, opt => opt.MapFrom(d => d.RestaurantId))
-                .ForMember(m => m.MenuItems, opt => opt.MapFrom(d => d.MenuItems));
+                .ForMember(m => m.RestaurantId, opt => opt.MapFrom(d => d.RestaurantId));
             CreateMap<MenuGetDto, Menu>()
                 .ForMember(m => m.Id, opt => opt.MapFrom(d => d.Id))
-                .ForMember(m => m.RestaurantId, opt => opt.MapFrom(d => d.RestaurantId))
-                .ForMember(m => m.MenuItems, opt => opt.MapFrom(d => d.MenuItems));
+                .ForMember(m => m.RestaurantId, opt => opt.MapFrom(d => d.RestaurantId));
             CreateMap<Menu, MenuPostDto>()
                 .ForMember(m => m.RestaurantId, opt => opt.MapFrom(d => d.RestaurantId));
             CreateMap<MenuPostDto, Menu>()

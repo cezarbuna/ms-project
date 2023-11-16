@@ -33,10 +33,15 @@ namespace MsaProject.Controllers
                  Price = newMenuItem.Price
             };
 
-            var menuItem = _mapper.Map<MenuItemPostDto, MenuItem>(newMenuItem);
-            var createdMenuItem = await _mediator.Send(command);
+            var menuItem = await _mediator.Send(command);
 
-            return CreatedAtAction(nameof(GetMenuItemById), new { menuItemId = menuItem.Id }, createdMenuItem);
+            if(menuItem != null)
+            {
+                var createdMenuItem = _mapper.Map<MenuItemGetDto>(menuItem);
+                return CreatedAtAction(nameof(GetMenuItemById), new { menuItemId = menuItem.Id }, createdMenuItem);
+            }
+
+            return StatusCode(StatusCodes.Status500InternalServerError, "Error creating new menu item");
         }
         [HttpGet]
         [Route("get-menuitem-by-id/{menuItemId}")]

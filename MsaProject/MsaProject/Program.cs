@@ -4,6 +4,8 @@ using Microsoft.Extensions.DependencyInjection;
 using MsaProject.Application.Commands.CustomerCommands;
 using MsaProject.Application.Commands.MenuCommands;
 using MsaProject.Application.Commands.MenuItemCommands;
+using MsaProject.Application.Commands.RestaurantCommands;
+using MsaProject.Application.Commands.TableCommands;
 using MsaProject.Dal;
 using MsaProject.Dal.Repositories;
 using MsaProject.Domain.IRepositories;
@@ -32,11 +34,13 @@ builder.Services.AddScoped<IReservationRepository, ReservationRepository>();
 
 builder.Services.AddDbContext<MsaProjectDbContext>(options =>
         options.UseSqlServer(builder.Configuration
-        .GetConnectionString(@"Server=DESKTOP-FOFN1JI;Database=Database1;Trusted_Connection=True;TrustServerCertificate=True;")));
+        .GetConnectionString(@"Server=DESKTOP-DLVFJ7V\SQLEXPRESS;Database=Database1;Trusted_Connection=True;TrustServerCertificate=True;")));
 
 builder.Services.AddMediatR(typeof(CreateCustomerCommand));
 builder.Services.AddMediatR(typeof(CreateMenuItemCommand));
 builder.Services.AddMediatR(typeof(CreateMenuCommand));
+builder.Services.AddMediatR(typeof(CreateRestaurantCommand));
+builder.Services.AddMediatR(typeof(CreateTableCommand));
 
 builder.Services.AddMediatR(typeof(Program));
 builder.Services.AddAutoMapper(typeof(Program));

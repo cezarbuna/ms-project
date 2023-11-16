@@ -21,7 +21,8 @@ namespace MsaProject.Application.QueryHandlers.MenuItemQueryHandlers
 
         public Task<List<MenuItem>> Handle(GetAllMenuItemsOfMenuQuery request, CancellationToken cancellationToken)
         {
-            return Task.FromResult(menuRepository.GetEntityByID(request.MenuId).MenuItems.ToList());
+            //return Task.FromResult(menuRepository.GetEntityByID(request.MenuId).MenuItems.ToList());
+            return Task.FromResult(new List<MenuItem>());
         }
     }
 }

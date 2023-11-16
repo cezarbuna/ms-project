@@ -23,20 +23,17 @@ namespace MsaProject.Application.CommandHandlers.MenuItemCommandHandlers
 
         public Task<MenuItem> Handle(CreateMenuItemCommand request, CancellationToken cancellationToken)
         {
-            var newMenuItem = new MenuItem
-            {
-                Name = request.Name,
-                Price = request.Price,
-                MenuId = request.MenuId
-            };
-
             var menu = menuRepository.GetEntityByID(request.MenuId);
 
-            if (menu != null)
+            if (menuRepository.Any(x => x.Id == request.MenuId))
             {
-                menu.MenuItems.Add(newMenuItem);
-                menuRepository.Update(menu);
-                menuRepository.SaveChanges();
+                var newMenuItem = new MenuItem
+                {
+                    Name = request.Name,
+                    Price = request.Price,
+                    MenuId = request.MenuId
+                };
+
                 menuItemRepository.Insert(newMenuItem);
                 menuItemRepository.SaveChanges();
 

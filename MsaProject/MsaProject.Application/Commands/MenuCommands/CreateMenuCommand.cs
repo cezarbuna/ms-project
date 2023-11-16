@@ -11,6 +11,5 @@ namespace MsaProject.Application.Commands.MenuCommands
     public class CreateMenuCommand : IRequest<Menu>
     {
         public Guid RestaurantId { get; set; }
-        public List<MenuItem> MenuItems { get; set; }
     }
 }

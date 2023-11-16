@@ -10,6 +10,6 @@ namespace MsaProject.Domain
     {
         public Guid RestaurantId { get; set; }
         public Restaurant Restaurant { get; set; }
-        public ICollection<MenuItem> MenuItems { get; set; }
+        //public ICollection<MenuItem> MenuItems { get; set; }
     }
 }

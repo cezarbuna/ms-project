@@ -36,10 +36,15 @@ namespace MsaProject.Controllers
                 RestaurantId = newMenu.RestaurantId
             };
 
-            var menu = _mapper.Map<MenuPostDto, Menu>(newMenu);
-            var createdMenu = await _mediator.Send(command);
+            var menu = await _mediator.Send(command);
 
-            return CreatedAtAction(nameof(GetMenuById), new { menuId = menu.Id }, createdMenu);
+            if(menu != null)
+            {
+                var createdMenu = _mapper.Map<MenuGetDto>(menu);
+                return CreatedAtAction(nameof(GetMenuById), new { menuId = menu.Id }, createdMenu);
+            }
+
+            return StatusCode(StatusCodes.Status500InternalServerError, "Error creating new menu");
         }
         [HttpGet]
         [Route("get-menu-by-id/{menuId}")]
