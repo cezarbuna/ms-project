@@ -8,5 +8,6 @@ namespace MsaProject.Domain.IRepositories
 {
     public interface IMenuRepository : IGenericRepository<Menu>
     {
+        
     }
 }

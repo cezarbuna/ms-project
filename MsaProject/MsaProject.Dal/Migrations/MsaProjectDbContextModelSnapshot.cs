@@ -175,6 +175,9 @@ namespace MsaProject.Dal.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<bool>("IsBooked")
+                        .HasColumnType("bit");
+
                     b.Property<int>("NumberOfSeats")
                         .HasColumnType("int");
 
