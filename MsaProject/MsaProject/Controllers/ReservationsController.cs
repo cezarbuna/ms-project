@@ -58,6 +58,35 @@ namespace MsaProject.Controllers
             var foundReservation = _mapper.Map<ReservationGetDto>(reservation);
             return Ok(foundReservation);
         }
+        [HttpGet]
+        [Route("get-reservations-by-customer-id/{customerId}")]
+        public async Task<IActionResult> GetReservationsByCustomerId(Guid customerId)
+        {
+            var query = new GetAllReservationsByCustomerIdQuery
+            {
+                CustomerId = customerId
+            };
+            var reservations = await _mediator.Send(query);
+
+            if (reservations != null)
+            {
+                return NotFound();
+            }
+            var foundReservations = _mapper.Map<List<ReservationGetDto>>(reservations);
+            return Ok(foundReservations);
+        }
+        [HttpDelete]
+        [Route("delete-reservation/{reservationId}")]
+        public async Task<IActionResult> DeleteReservation(Guid reservationId)
+        {
+            var command = new DeleteReservationCommand { ReservationId = reservationId };
+            var foundReservation = await _mediator.Send(command);
+
+            if (foundReservation == null)
+                return NotFound();
+
+            return NoContent();
+        }
     }
     
 }

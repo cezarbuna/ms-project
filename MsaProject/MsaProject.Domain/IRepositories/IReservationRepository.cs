@@ -8,5 +8,7 @@ namespace MsaProject.Domain.IRepositories
 {
     public interface IReservationRepository : IGenericRepository<Reservation>
     {
+        public IEnumerable<Reservation> GetAllByCustomerId(Guid customerId);
+        public IEnumerable<Reservation> GetAllByTableId(Guid tableId);
     }
 }

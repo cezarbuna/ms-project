@@ -4,6 +4,7 @@ using Microsoft.Extensions.DependencyInjection;
 using MsaProject.Application.Commands.CustomerCommands;
 using MsaProject.Application.Commands.MenuCommands;
 using MsaProject.Application.Commands.MenuItemCommands;
+using MsaProject.Application.Commands.OwnerCommands;
 using MsaProject.Application.Commands.ReservationCommands;
 using MsaProject.Application.Commands.RestaurantCommands;
 using MsaProject.Application.Commands.TableCommands;
@@ -43,6 +44,7 @@ builder.Services.AddMediatR(typeof(CreateMenuCommand));
 builder.Services.AddMediatR(typeof(CreateRestaurantCommand));
 builder.Services.AddMediatR(typeof(CreateTableCommand));
 builder.Services.AddMediatR(typeof(CreateReservationCommand));
+builder.Services.AddMediatR(typeof(CreateOwnerCommand));
 
 builder.Services.AddMediatR(typeof(Program));
 builder.Services.AddAutoMapper(typeof(Program));
