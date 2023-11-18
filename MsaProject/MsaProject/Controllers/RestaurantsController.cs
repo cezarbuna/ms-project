@@ -42,7 +42,7 @@ namespace MsaProject.Controllers
                 return CreatedAtAction(nameof(GetRestaurantById), new { restaurantId = restaurant.Id }, createdRestaurant);
             }
 
-            return StatusCode(StatusCodes.Status500InternalServerError, "Error creating new menu item");
+            return StatusCode(StatusCodes.Status500InternalServerError, "Error creating new restaurant");
         }
 
         [HttpGet]

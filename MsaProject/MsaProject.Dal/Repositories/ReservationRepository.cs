@@ -13,5 +13,15 @@ namespace MsaProject.Dal.Repositories
         public ReservationRepository(MsaProjectDbContext context) : base(context)
         {
         }
+
+        public IEnumerable<Reservation> GetAllByCustomerId(Guid customerId)
+        {
+            return context.Reservations.Where(r => r.CustomerId == customerId);
+        }
+
+        public IEnumerable<Reservation> GetAllByTableId(Guid tableId)
+        {
+            return context.Reservations.Where(r => r.TableId == tableId);
+        }
     }
 }
