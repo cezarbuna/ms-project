@@ -30,10 +30,5 @@ namespace MsaProject.Dal
                 b => b.MigrationsAssembly("MsaProject.Dal"))
                 .EnableSensitiveDataLogging();
         }
-        //protected override void OnModelCreating(ModelBuilder modelBuilder)
-        //{
-        //    //modelBuilder.ApplyConfiguration(new MenuRestaurantEntityConfiguration());
-        //    throw new NotImplementedException();
-        //}
     }
 }
