@@ -118,6 +118,19 @@
           "lib/netstandard2.1/MediatR.Extensions.Microsoft.DependencyInjection.dll": {}
         }
       },
+      "Microsoft.AspNet.WebApi.Client/5.2.7": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "10.0.1",
+          "Newtonsoft.Json.Bson": "1.0.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/System.Net.Http.Formatting.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Net.Http.Formatting.dll": {}
+        }
+      },
       "Microsoft.AspNetCore.Antiforgery/2.2.0": {
         "type": "package",
         "dependencies": {
@@ -161,6 +174,21 @@
         "runtime": {
           "lib/netstandard2.0/Microsoft.AspNetCore.Authentication.Core.dll": {}
         }
+      },
+      "Microsoft.AspNetCore.Authentication.JwtBearer/6.0.25": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.IdentityModel.Protocols.OpenIdConnect": "6.10.0"
+        },
+        "compile": {
+          "lib/net6.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       },
       "Microsoft.AspNetCore.Authorization/2.2.0": {
         "type": "package",
@@ -1394,7 +1422,7 @@
           "lib/netstandard2.0/Microsoft.Net.Http.Headers.dll": {}
         }
       },
-      "Microsoft.NETCore.Platforms/1.1.0": {
+      "Microsoft.NETCore.Platforms/2.0.0": {
         "type": "package",
         "compile": {
           "lib/netstandard1.0/_._": {}
@@ -1428,6 +1456,88 @@
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.SqlServer.Server.dll": {}
+        }
+      },
+      "Microsoft.TeamFoundation.DistributedTask.Common.Contracts/16.205.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.VisualStudio.Services.Client": "[16.205.1]"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.TeamFoundation.DistributedTask.Common.Contracts.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.TeamFoundation.DistributedTask.Common.Contracts.dll": {}
+        }
+      },
+      "Microsoft.TeamFoundationServer.Client/16.205.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNet.WebApi.Client": "5.2.7",
+          "Microsoft.TeamFoundation.DistributedTask.Common.Contracts": "[16.205.1]",
+          "Microsoft.VisualStudio.Services.Client": "[16.205.1]",
+          "Newtonsoft.Json": "12.0.3",
+          "System.ComponentModel.Annotations": "4.4.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/MS.TF.Pipelines.WebApi.NetStandard.dll": {},
+          "lib/netstandard2.0/Microsoft.Azure.DevOps.Comments.WebApi.dll": {},
+          "lib/netstandard2.0/Microsoft.Azure.Pipelines.WebApi.dll": {},
+          "lib/netstandard2.0/Microsoft.TeamFoundation.Build2.WebApi.dll": {},
+          "lib/netstandard2.0/Microsoft.TeamFoundation.Core.WebApi.dll": {},
+          "lib/netstandard2.0/Microsoft.TeamFoundation.Dashboards.WebApi.dll": {},
+          "lib/netstandard2.0/Microsoft.TeamFoundation.Policy.WebApi.dll": {},
+          "lib/netstandard2.0/Microsoft.TeamFoundation.SourceControl.WebApi.dll": {},
+          "lib/netstandard2.0/Microsoft.TeamFoundation.Test.WebApi.dll": {},
+          "lib/netstandard2.0/Microsoft.TeamFoundation.TestManagement.WebApi.dll": {},
+          "lib/netstandard2.0/Microsoft.TeamFoundation.Wiki.WebApi.dll": {},
+          "lib/netstandard2.0/Microsoft.TeamFoundation.Work.WebApi.dll": {},
+          "lib/netstandard2.0/Microsoft.TeamFoundation.WorkItemTracking.Process.WebApi.dll": {},
+          "lib/netstandard2.0/Microsoft.TeamFoundation.WorkItemTracking.WebApi.dll": {},
+          "lib/netstandard2.0/Microsoft.VisualStudio.Services.TestManagement.TestPlanning.WebApi.dll": {},
+          "lib/netstandard2.0/Microsoft.VisualStudio.Services.TestResults.WebApi.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/MS.TF.Pipelines.WebApi.NetStandard.dll": {},
+          "lib/netstandard2.0/Microsoft.Azure.DevOps.Comments.WebApi.dll": {},
+          "lib/netstandard2.0/Microsoft.Azure.Pipelines.WebApi.dll": {},
+          "lib/netstandard2.0/Microsoft.TeamFoundation.Build2.WebApi.dll": {},
+          "lib/netstandard2.0/Microsoft.TeamFoundation.Core.WebApi.dll": {},
+          "lib/netstandard2.0/Microsoft.TeamFoundation.Dashboards.WebApi.dll": {},
+          "lib/netstandard2.0/Microsoft.TeamFoundation.Policy.WebApi.dll": {},
+          "lib/netstandard2.0/Microsoft.TeamFoundation.SourceControl.WebApi.dll": {},
+          "lib/netstandard2.0/Microsoft.TeamFoundation.Test.WebApi.dll": {},
+          "lib/netstandard2.0/Microsoft.TeamFoundation.TestManagement.WebApi.dll": {},
+          "lib/netstandard2.0/Microsoft.TeamFoundation.Wiki.WebApi.dll": {},
+          "lib/netstandard2.0/Microsoft.TeamFoundation.Work.WebApi.dll": {},
+          "lib/netstandard2.0/Microsoft.TeamFoundation.WorkItemTracking.Process.WebApi.dll": {},
+          "lib/netstandard2.0/Microsoft.TeamFoundation.WorkItemTracking.WebApi.dll": {},
+          "lib/netstandard2.0/Microsoft.VisualStudio.Services.TestManagement.TestPlanning.WebApi.dll": {},
+          "lib/netstandard2.0/Microsoft.VisualStudio.Services.TestResults.WebApi.dll": {}
+        }
+      },
+      "Microsoft.VisualStudio.Services.Client/16.205.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNet.WebApi.Client": "5.2.7",
+          "Newtonsoft.Json": "12.0.3",
+          "System.Configuration.ConfigurationManager": "4.4.1",
+          "System.Data.SqlClient": "4.4.2",
+          "System.Security.Cryptography.Cng": "4.4.0",
+          "System.Security.Cryptography.OpenSsl": "4.4.0",
+          "System.Security.Cryptography.ProtectedData": "4.4.0",
+          "System.Security.Principal.Windows": "4.4.1",
+          "System.Xml.XPath.XmlDocument": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.TeamFoundation.Common.dll": {},
+          "lib/netstandard2.0/Microsoft.VisualStudio.Services.Common.dll": {},
+          "lib/netstandard2.0/Microsoft.VisualStudio.Services.WebApi.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.TeamFoundation.Common.dll": {},
+          "lib/netstandard2.0/Microsoft.VisualStudio.Services.Common.dll": {},
+          "lib/netstandard2.0/Microsoft.VisualStudio.Services.WebApi.dll": {}
         }
       },
       "Microsoft.Win32.Primitives/4.3.0": {
@@ -1559,7 +1669,7 @@
           "System.Xml.XDocument": "4.3.0"
         }
       },
-      "Newtonsoft.Json/11.0.2": {
+      "Newtonsoft.Json/12.0.3": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
@@ -1636,6 +1746,14 @@
         },
         "runtime": {
           "lib/netstandard1.0/_._": {}
+        }
+      },
+      "runtime.native.System.Data.SqlClient.sni/4.4.0": {
+        "type": "package",
+        "dependencies": {
+          "runtime.win-arm64.runtime.native.System.Data.SqlClient.sni": "4.4.0",
+          "runtime.win-x64.runtime.native.System.Data.SqlClient.sni": "4.4.0",
+          "runtime.win-x86.runtime.native.System.Data.SqlClient.sni": "4.4.0"
         }
       },
       "runtime.native.System.IO.Compression/4.3.0": {
@@ -1766,6 +1884,33 @@
           "runtimes/ubuntu.16.10-x64/native/System.Security.Cryptography.Native.OpenSsl.so": {
             "assetType": "native",
             "rid": "ubuntu.16.10-x64"
+          }
+        }
+      },
+      "runtime.win-arm64.runtime.native.System.Data.SqlClient.sni/4.4.0": {
+        "type": "package",
+        "runtimeTargets": {
+          "runtimes/win-arm64/native/sni.dll": {
+            "assetType": "native",
+            "rid": "win-arm64"
+          }
+        }
+      },
+      "runtime.win-x64.runtime.native.System.Data.SqlClient.sni/4.4.0": {
+        "type": "package",
+        "runtimeTargets": {
+          "runtimes/win-x64/native/sni.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          }
+        }
+      },
+      "runtime.win-x86.runtime.native.System.Data.SqlClient.sni/4.4.0": {
+        "type": "package",
+        "runtimeTargets": {
+          "runtimes/win-x86/native/sni.dll": {
+            "assetType": "native",
+            "rid": "win-x86"
           }
         }
       },
@@ -1945,7 +2090,7 @@
           "System.Security.Permissions": "6.0.0"
         },
         "compile": {
-          "lib/net6.0/_._": {}
+          "lib/net6.0/System.Configuration.ConfigurationManager.dll": {}
         },
         "runtime": {
           "lib/net6.0/System.Configuration.ConfigurationManager.dll": {}
@@ -1965,6 +2110,31 @@
         },
         "compile": {
           "ref/netstandard1.3/System.Console.dll": {}
+        }
+      },
+      "System.Data.SqlClient/4.4.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Win32.Registry": "4.4.0",
+          "System.Security.Principal.Windows": "4.4.0",
+          "System.Text.Encoding.CodePages": "4.4.0",
+          "runtime.native.System.Data.SqlClient.sni": "4.4.0"
+        },
+        "compile": {
+          "ref/netstandard2.0/System.Data.SqlClient.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Data.SqlClient.dll": {}
+        },
+        "runtimeTargets": {
+          "runtimes/unix/lib/netstandard2.0/System.Data.SqlClient.dll": {
+            "assetType": "runtime",
+            "rid": "unix"
+          },
+          "runtimes/win/lib/netstandard2.0/System.Data.SqlClient.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
         }
       },
       "System.Diagnostics.Debug/4.3.0": {
@@ -2816,31 +2986,19 @@
           }
         }
       },
-      "System.Security.Cryptography.OpenSsl/4.3.0": {
+      "System.Security.Cryptography.OpenSsl/4.4.0": {
         "type": "package",
         "dependencies": {
-          "System.Collections": "4.3.0",
-          "System.IO": "4.3.0",
-          "System.Resources.ResourceManager": "4.3.0",
-          "System.Runtime": "4.3.0",
-          "System.Runtime.Extensions": "4.3.0",
-          "System.Runtime.Handles": "4.3.0",
-          "System.Runtime.InteropServices": "4.3.0",
-          "System.Runtime.Numerics": "4.3.0",
-          "System.Security.Cryptography.Algorithms": "4.3.0",
-          "System.Security.Cryptography.Encoding": "4.3.0",
-          "System.Security.Cryptography.Primitives": "4.3.0",
-          "System.Text.Encoding": "4.3.0",
-          "runtime.native.System.Security.Cryptography.OpenSsl": "4.3.0"
+          "Microsoft.NETCore.Platforms": "2.0.0"
         },
         "compile": {
-          "ref/netstandard1.6/_._": {}
+          "ref/netcoreapp2.0/System.Security.Cryptography.OpenSsl.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.6/System.Security.Cryptography.OpenSsl.dll": {}
+          "lib/netstandard2.0/System.Security.Cryptography.OpenSsl.dll": {}
         },
         "runtimeTargets": {
-          "runtimes/unix/lib/netstandard1.6/System.Security.Cryptography.OpenSsl.dll": {
+          "runtimes/unix/lib/netcoreapp2.0/System.Security.Cryptography.OpenSsl.dll": {
             "assetType": "runtime",
             "rid": "unix"
           }
@@ -3255,7 +3413,7 @@
           "System.Xml.ReaderWriter": "4.3.0"
         },
         "compile": {
-          "ref/netstandard1.3/_._": {}
+          "ref/netstandard1.3/System.Xml.XmlDocument.dll": {}
         },
         "runtime": {
           "lib/netstandard1.3/System.Xml.XmlDocument.dll": {}
@@ -3275,7 +3433,7 @@
           "System.Xml.ReaderWriter": "4.3.0"
         },
         "compile": {
-          "ref/netstandard1.3/_._": {}
+          "ref/netstandard1.3/System.Xml.XPath.dll": {}
         },
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.dll": {}
@@ -3299,6 +3457,27 @@
         },
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
+        }
+      },
+      "System.Xml.XPath.XmlDocument/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Collections": "4.3.0",
+          "System.Globalization": "4.3.0",
+          "System.IO": "4.3.0",
+          "System.Resources.ResourceManager": "4.3.0",
+          "System.Runtime": "4.3.0",
+          "System.Runtime.Extensions": "4.3.0",
+          "System.Threading": "4.3.0",
+          "System.Xml.ReaderWriter": "4.3.0",
+          "System.Xml.XPath": "4.3.0",
+          "System.Xml.XmlDocument": "4.3.0"
+        },
+        "compile": {
+          "ref/netstandard1.3/System.Xml.XPath.XmlDocument.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/System.Xml.XPath.XmlDocument.dll": {}
         }
       },
       "MsaProject.Application/1.0.0": {
@@ -3487,6 +3666,23 @@
         "mediatr.extensions.microsoft.dependencyinjection.nuspec"
       ]
     },
+    "Microsoft.AspNet.WebApi.Client/5.2.7": {
+      "sha512": "/76fAHknzvFqbznS6Uj2sOyE9rJB3PltY+f53TH8dX9RiGhk02EhuFCWljSj5nnqKaTsmma8DFR50OGyQ4yJ1g==",
+      "type": "package",
+      "path": "microsoft.aspnet.webapi.client/5.2.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/System.Net.Http.Formatting.dll",
+        "lib/net45/System.Net.Http.Formatting.xml",
+        "lib/netstandard2.0/System.Net.Http.Formatting.dll",
+        "lib/netstandard2.0/System.Net.Http.Formatting.xml",
+        "lib/portable-wp8+netcore45+net45+wp81+wpa81/System.Net.Http.Formatting.dll",
+        "lib/portable-wp8+netcore45+net45+wp81+wpa81/System.Net.Http.Formatting.xml",
+        "microsoft.aspnet.webapi.client.5.2.7.nupkg.sha512",
+        "microsoft.aspnet.webapi.client.nuspec"
+      ]
+    },
     "Microsoft.AspNetCore.Antiforgery/2.2.0": {
       "sha512": "fVQsSXNZz38Ysx8iKwwqfOLHhLrAeKEMBS5Ia3Lh7BJjOC2vPV28/yk08AovOMsB3SNQPGnE7bv+lsIBTmAkvw==",
       "type": "package",
@@ -3524,6 +3720,21 @@
         "lib/netstandard2.0/Microsoft.AspNetCore.Authentication.Core.xml",
         "microsoft.aspnetcore.authentication.core.2.2.0.nupkg.sha512",
         "microsoft.aspnetcore.authentication.core.nuspec"
+      ]
+    },
+    "Microsoft.AspNetCore.Authentication.JwtBearer/6.0.25": {
+      "sha512": "bc7KZZRAHLpeuznhuQWGHW7kNDRvKsUY7fPq9ftOBLR8DUtyTF1amgHxbHKg9sveTGwrJPiBf4b42pVTYlRccg==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.authentication.jwtbearer/6.0.25",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net6.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll",
+        "lib/net6.0/Microsoft.AspNetCore.Authentication.JwtBearer.xml",
+        "microsoft.aspnetcore.authentication.jwtbearer.6.0.25.nupkg.sha512",
+        "microsoft.aspnetcore.authentication.jwtbearer.nuspec"
       ]
     },
     "Microsoft.AspNetCore.Authorization/2.2.0": {
@@ -5193,19 +5404,21 @@
         "microsoft.net.http.headers.nuspec"
       ]
     },
-    "Microsoft.NETCore.Platforms/1.1.0": {
-      "sha512": "kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A==",
+    "Microsoft.NETCore.Platforms/2.0.0": {
+      "sha512": "VdLJOCXhZaEMY7Hm2GKiULmn7IEPFE4XC5LPSfBVCUIA8YLZVh846gtfBJalsPQF2PlzdD7ecX7DZEulJ402ZQ==",
       "type": "package",
-      "path": "microsoft.netcore.platforms/1.1.0",
+      "path": "microsoft.netcore.platforms/2.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
         "lib/netstandard1.0/_._",
-        "microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+        "microsoft.netcore.platforms.2.0.0.nupkg.sha512",
         "microsoft.netcore.platforms.nuspec",
-        "runtime.json"
+        "runtime.json",
+        "useSharedDesignerContext.txt",
+        "version.txt"
       ]
     },
     "Microsoft.NETCore.Targets/1.1.0": {
@@ -5256,6 +5469,187 @@
         "lib/netstandard2.0/Microsoft.SqlServer.Server.xml",
         "microsoft.sqlserver.server.1.0.0.nupkg.sha512",
         "microsoft.sqlserver.server.nuspec"
+      ]
+    },
+    "Microsoft.TeamFoundation.DistributedTask.Common.Contracts/16.205.1": {
+      "sha512": "TkIBlzwgmw4mFO20r0DZcm5WGGGZhUgE0vfPC9KzlTvqALhoVMYJfpn0ewfib6IofiAMxDd7GFp9GScj4LtOWw==",
+      "type": "package",
+      "path": "microsoft.teamfoundation.distributedtask.common.contracts/16.205.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net462/Microsoft.TeamFoundation.DistributedTask.Common.Contracts.dll",
+        "lib/net462/Microsoft.TeamFoundation.DistributedTask.Common.Contracts.xml",
+        "lib/netstandard2.0/Microsoft.TeamFoundation.DistributedTask.Common.Contracts.dll",
+        "lib/netstandard2.0/Microsoft.TeamFoundation.DistributedTask.Common.Contracts.xml",
+        "license.rtf",
+        "license.txt",
+        "microsoft.teamfoundation.distributedtask.common.contracts.16.205.1.nupkg.sha512",
+        "microsoft.teamfoundation.distributedtask.common.contracts.nuspec"
+      ]
+    },
+    "Microsoft.TeamFoundationServer.Client/16.205.1": {
+      "sha512": "Ti6Tt348tTdKhqHmlV0+PZ6T+/t6W2qhbKFK+vDZstDD/JetKfO8/O8JcS8HnURdQ+D4Y/n/YjZ8IITUUZb68g==",
+      "type": "package",
+      "path": "microsoft.teamfoundationserver.client/16.205.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net462/Microsoft.Azure.DevOps.Comments.WebApi.dll",
+        "lib/net462/Microsoft.Azure.DevOps.Comments.WebApi.xml",
+        "lib/net462/Microsoft.Azure.Pipelines.WebApi.dll",
+        "lib/net462/Microsoft.Azure.Pipelines.WebApi.xml",
+        "lib/net462/Microsoft.TeamFoundation.Build2.WebApi.dll",
+        "lib/net462/Microsoft.TeamFoundation.Build2.WebApi.xml",
+        "lib/net462/Microsoft.TeamFoundation.Core.WebApi.dll",
+        "lib/net462/Microsoft.TeamFoundation.Core.WebApi.xml",
+        "lib/net462/Microsoft.TeamFoundation.Dashboards.WebApi.dll",
+        "lib/net462/Microsoft.TeamFoundation.Dashboards.WebApi.xml",
+        "lib/net462/Microsoft.TeamFoundation.Pipelines.WebApi.dll",
+        "lib/net462/Microsoft.TeamFoundation.Pipelines.WebApi.xml",
+        "lib/net462/Microsoft.TeamFoundation.Policy.WebApi.dll",
+        "lib/net462/Microsoft.TeamFoundation.Policy.WebApi.xml",
+        "lib/net462/Microsoft.TeamFoundation.SourceControl.WebApi.dll",
+        "lib/net462/Microsoft.TeamFoundation.SourceControl.WebApi.xml",
+        "lib/net462/Microsoft.TeamFoundation.Test.WebApi.dll",
+        "lib/net462/Microsoft.TeamFoundation.Test.WebApi.xml",
+        "lib/net462/Microsoft.TeamFoundation.TestManagement.WebApi.dll",
+        "lib/net462/Microsoft.TeamFoundation.TestManagement.WebApi.xml",
+        "lib/net462/Microsoft.TeamFoundation.Wiki.WebApi.dll",
+        "lib/net462/Microsoft.TeamFoundation.Wiki.WebApi.xml",
+        "lib/net462/Microsoft.TeamFoundation.Work.WebApi.dll",
+        "lib/net462/Microsoft.TeamFoundation.Work.WebApi.xml",
+        "lib/net462/Microsoft.TeamFoundation.WorkItemTracking.Process.WebApi.dll",
+        "lib/net462/Microsoft.TeamFoundation.WorkItemTracking.Process.WebApi.xml",
+        "lib/net462/Microsoft.TeamFoundation.WorkItemTracking.WebApi.dll",
+        "lib/net462/Microsoft.TeamFoundation.WorkItemTracking.WebApi.xml",
+        "lib/net462/Microsoft.VisualStudio.Services.TestManagement.TestPlanning.WebApi.dll",
+        "lib/net462/Microsoft.VisualStudio.Services.TestManagement.TestPlanning.WebApi.xml",
+        "lib/net462/Microsoft.VisualStudio.Services.TestResults.WebApi.dll",
+        "lib/net462/Microsoft.VisualStudio.Services.TestResults.WebApi.xml",
+        "lib/net462/cs/Microsoft.TeamFoundation.Core.WebApi.resources.dll",
+        "lib/net462/de/Microsoft.TeamFoundation.Core.WebApi.resources.dll",
+        "lib/net462/de/Microsoft.TeamFoundation.Dashboards.WebApi.resources.dll",
+        "lib/net462/es/Microsoft.TeamFoundation.Core.WebApi.resources.dll",
+        "lib/net462/es/Microsoft.TeamFoundation.Dashboards.WebApi.resources.dll",
+        "lib/net462/fr/Microsoft.TeamFoundation.Core.WebApi.resources.dll",
+        "lib/net462/fr/Microsoft.TeamFoundation.Dashboards.WebApi.resources.dll",
+        "lib/net462/it/Microsoft.TeamFoundation.Core.WebApi.resources.dll",
+        "lib/net462/it/Microsoft.TeamFoundation.Dashboards.WebApi.resources.dll",
+        "lib/net462/ja/Microsoft.TeamFoundation.Core.WebApi.resources.dll",
+        "lib/net462/ja/Microsoft.TeamFoundation.Dashboards.WebApi.resources.dll",
+        "lib/net462/ko/Microsoft.TeamFoundation.Core.WebApi.resources.dll",
+        "lib/net462/ko/Microsoft.TeamFoundation.Dashboards.WebApi.resources.dll",
+        "lib/net462/pl/Microsoft.TeamFoundation.Core.WebApi.resources.dll",
+        "lib/net462/pt-BR/Microsoft.TeamFoundation.Core.WebApi.resources.dll",
+        "lib/net462/ru/Microsoft.TeamFoundation.Core.WebApi.resources.dll",
+        "lib/net462/ru/Microsoft.TeamFoundation.Dashboards.WebApi.resources.dll",
+        "lib/net462/tr/Microsoft.TeamFoundation.Core.WebApi.resources.dll",
+        "lib/net462/tr/Microsoft.TeamFoundation.Dashboards.WebApi.resources.dll",
+        "lib/net462/zh-Hans/Microsoft.TeamFoundation.Core.WebApi.resources.dll",
+        "lib/net462/zh-Hans/Microsoft.TeamFoundation.Dashboards.WebApi.resources.dll",
+        "lib/net462/zh-Hant/Microsoft.TeamFoundation.Core.WebApi.resources.dll",
+        "lib/net462/zh-Hant/Microsoft.TeamFoundation.Dashboards.WebApi.resources.dll",
+        "lib/netstandard2.0/.xml",
+        "lib/netstandard2.0/MS.TF.Pipelines.WebApi.NetStandard.dll",
+        "lib/netstandard2.0/Microsoft.Azure.DevOps.Comments.WebApi.dll",
+        "lib/netstandard2.0/Microsoft.Azure.DevOps.Comments.WebApi.xml",
+        "lib/netstandard2.0/Microsoft.Azure.Pipelines.WebApi.dll",
+        "lib/netstandard2.0/Microsoft.Azure.Pipelines.WebApi.xml",
+        "lib/netstandard2.0/Microsoft.TeamFoundation.Build2.WebApi.dll",
+        "lib/netstandard2.0/Microsoft.TeamFoundation.Build2.WebApi.xml",
+        "lib/netstandard2.0/Microsoft.TeamFoundation.Core.WebApi.dll",
+        "lib/netstandard2.0/Microsoft.TeamFoundation.Core.WebApi.xml",
+        "lib/netstandard2.0/Microsoft.TeamFoundation.Dashboards.WebApi.dll",
+        "lib/netstandard2.0/Microsoft.TeamFoundation.Dashboards.WebApi.xml",
+        "lib/netstandard2.0/Microsoft.TeamFoundation.Policy.WebApi.dll",
+        "lib/netstandard2.0/Microsoft.TeamFoundation.Policy.WebApi.xml",
+        "lib/netstandard2.0/Microsoft.TeamFoundation.SourceControl.WebApi.dll",
+        "lib/netstandard2.0/Microsoft.TeamFoundation.SourceControl.WebApi.xml",
+        "lib/netstandard2.0/Microsoft.TeamFoundation.Test.WebApi.dll",
+        "lib/netstandard2.0/Microsoft.TeamFoundation.Test.WebApi.xml",
+        "lib/netstandard2.0/Microsoft.TeamFoundation.TestManagement.WebApi.dll",
+        "lib/netstandard2.0/Microsoft.TeamFoundation.TestManagement.WebApi.xml",
+        "lib/netstandard2.0/Microsoft.TeamFoundation.Wiki.WebApi.dll",
+        "lib/netstandard2.0/Microsoft.TeamFoundation.Wiki.WebApi.xml",
+        "lib/netstandard2.0/Microsoft.TeamFoundation.Work.WebApi.dll",
+        "lib/netstandard2.0/Microsoft.TeamFoundation.Work.WebApi.xml",
+        "lib/netstandard2.0/Microsoft.TeamFoundation.WorkItemTracking.Process.WebApi.dll",
+        "lib/netstandard2.0/Microsoft.TeamFoundation.WorkItemTracking.Process.WebApi.xml",
+        "lib/netstandard2.0/Microsoft.TeamFoundation.WorkItemTracking.WebApi.dll",
+        "lib/netstandard2.0/Microsoft.TeamFoundation.WorkItemTracking.WebApi.xml",
+        "lib/netstandard2.0/Microsoft.VisualStudio.Services.TestManagement.TestPlanning.WebApi.dll",
+        "lib/netstandard2.0/Microsoft.VisualStudio.Services.TestManagement.TestPlanning.WebApi.xml",
+        "lib/netstandard2.0/Microsoft.VisualStudio.Services.TestResults.WebApi.dll",
+        "lib/netstandard2.0/Microsoft.VisualStudio.Services.TestResults.WebApi.xml",
+        "license.rtf",
+        "license.txt",
+        "microsoft.teamfoundationserver.client.16.205.1.nupkg.sha512",
+        "microsoft.teamfoundationserver.client.nuspec"
+      ]
+    },
+    "Microsoft.VisualStudio.Services.Client/16.205.1": {
+      "sha512": "3mebm1OWVNeYhtGM1tT/vwRGNeNoH5snt0sYJXPz+TipzlUf7Dv0vaMsizbbI0jZESlWbz61g/lx2yF1eym9qA==",
+      "type": "package",
+      "path": "microsoft.visualstudio.services.client/16.205.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net462/Microsoft.TeamFoundation.Common.dll",
+        "lib/net462/Microsoft.TeamFoundation.Common.xml",
+        "lib/net462/Microsoft.VisualStudio.Services.Common.dll",
+        "lib/net462/Microsoft.VisualStudio.Services.Common.xml",
+        "lib/net462/Microsoft.VisualStudio.Services.WebApi.dll",
+        "lib/net462/Microsoft.VisualStudio.Services.WebApi.xml",
+        "lib/net462/cs/Microsoft.TeamFoundation.Common.resources.dll",
+        "lib/net462/cs/Microsoft.VisualStudio.Services.Common.resources.dll",
+        "lib/net462/cs/Microsoft.VisualStudio.Services.WebApi.resources.dll",
+        "lib/net462/de/Microsoft.TeamFoundation.Common.resources.dll",
+        "lib/net462/de/Microsoft.VisualStudio.Services.Common.resources.dll",
+        "lib/net462/de/Microsoft.VisualStudio.Services.WebApi.resources.dll",
+        "lib/net462/es/Microsoft.TeamFoundation.Common.resources.dll",
+        "lib/net462/es/Microsoft.VisualStudio.Services.Common.resources.dll",
+        "lib/net462/es/Microsoft.VisualStudio.Services.WebApi.resources.dll",
+        "lib/net462/fr/Microsoft.TeamFoundation.Common.resources.dll",
+        "lib/net462/fr/Microsoft.VisualStudio.Services.Common.resources.dll",
+        "lib/net462/fr/Microsoft.VisualStudio.Services.WebApi.resources.dll",
+        "lib/net462/it/Microsoft.TeamFoundation.Common.resources.dll",
+        "lib/net462/it/Microsoft.VisualStudio.Services.Common.resources.dll",
+        "lib/net462/it/Microsoft.VisualStudio.Services.WebApi.resources.dll",
+        "lib/net462/ja/Microsoft.TeamFoundation.Common.resources.dll",
+        "lib/net462/ja/Microsoft.VisualStudio.Services.Common.resources.dll",
+        "lib/net462/ja/Microsoft.VisualStudio.Services.WebApi.resources.dll",
+        "lib/net462/ko/Microsoft.TeamFoundation.Common.resources.dll",
+        "lib/net462/ko/Microsoft.VisualStudio.Services.Common.resources.dll",
+        "lib/net462/ko/Microsoft.VisualStudio.Services.WebApi.resources.dll",
+        "lib/net462/pl/Microsoft.TeamFoundation.Common.resources.dll",
+        "lib/net462/pl/Microsoft.VisualStudio.Services.Common.resources.dll",
+        "lib/net462/pl/Microsoft.VisualStudio.Services.WebApi.resources.dll",
+        "lib/net462/pt-BR/Microsoft.TeamFoundation.Common.resources.dll",
+        "lib/net462/pt-BR/Microsoft.VisualStudio.Services.Common.resources.dll",
+        "lib/net462/pt-BR/Microsoft.VisualStudio.Services.WebApi.resources.dll",
+        "lib/net462/ru/Microsoft.TeamFoundation.Common.resources.dll",
+        "lib/net462/ru/Microsoft.VisualStudio.Services.Common.resources.dll",
+        "lib/net462/ru/Microsoft.VisualStudio.Services.WebApi.resources.dll",
+        "lib/net462/tr/Microsoft.TeamFoundation.Common.resources.dll",
+        "lib/net462/tr/Microsoft.VisualStudio.Services.Common.resources.dll",
+        "lib/net462/tr/Microsoft.VisualStudio.Services.WebApi.resources.dll",
+        "lib/net462/zh-Hans/Microsoft.TeamFoundation.Common.resources.dll",
+        "lib/net462/zh-Hans/Microsoft.VisualStudio.Services.Common.resources.dll",
+        "lib/net462/zh-Hans/Microsoft.VisualStudio.Services.WebApi.resources.dll",
+        "lib/net462/zh-Hant/Microsoft.TeamFoundation.Common.resources.dll",
+        "lib/net462/zh-Hant/Microsoft.VisualStudio.Services.Common.resources.dll",
+        "lib/net462/zh-Hant/Microsoft.VisualStudio.Services.WebApi.resources.dll",
+        "lib/netstandard2.0/Microsoft.TeamFoundation.Common.dll",
+        "lib/netstandard2.0/Microsoft.TeamFoundation.Common.xml",
+        "lib/netstandard2.0/Microsoft.VisualStudio.Services.Common.dll",
+        "lib/netstandard2.0/Microsoft.VisualStudio.Services.Common.xml",
+        "lib/netstandard2.0/Microsoft.VisualStudio.Services.WebApi.dll",
+        "lib/netstandard2.0/Microsoft.VisualStudio.Services.WebApi.xml",
+        "license.rtf",
+        "license.txt",
+        "microsoft.visualstudio.services.client.16.205.1.nupkg.sha512",
+        "microsoft.visualstudio.services.client.nuspec"
       ]
     },
     "Microsoft.Win32.Primitives/4.3.0": {
@@ -5408,10 +5802,10 @@
         "netstandard.library.nuspec"
       ]
     },
-    "Newtonsoft.Json/11.0.2": {
-      "sha512": "IvJe1pj7JHEsP8B8J8DwlMEx8UInrs/x+9oVY+oCD13jpLu4JbJU2WCIsMRn5C4yW9+DgkaO8uiVE5VHKjpmdQ==",
+    "Newtonsoft.Json/12.0.3": {
+      "sha512": "6mgjfnRB4jKMlzHSl+VD+oUc1IebOZabkbyWj2RiTgWwYPPuaK1H97G1sHqGwPlS5npiF5Q0OrxN1wni2n5QWg==",
       "type": "package",
-      "path": "newtonsoft.json/11.0.2",
+      "path": "newtonsoft.json/12.0.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -5434,8 +5828,9 @@
         "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.xml",
         "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.dll",
         "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.xml",
-        "newtonsoft.json.11.0.2.nupkg.sha512",
-        "newtonsoft.json.nuspec"
+        "newtonsoft.json.12.0.3.nupkg.sha512",
+        "newtonsoft.json.nuspec",
+        "packageIcon.png"
       ]
     },
     "Newtonsoft.Json.Bson/1.0.1": {
@@ -5523,6 +5918,21 @@
         "lib/netstandard1.0/_._",
         "runtime.native.system.4.3.0.nupkg.sha512",
         "runtime.native.system.nuspec"
+      ]
+    },
+    "runtime.native.System.Data.SqlClient.sni/4.4.0": {
+      "sha512": "A8v6PGmk+UGbfWo5Ixup0lPM4swuSwOiayJExZwKIOjTlFFQIsu3QnDXECosBEyrWSPryxBVrdqtJyhK3BaupQ==",
+      "type": "package",
+      "path": "runtime.native.system.data.sqlclient.sni/4.4.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+        "runtime.native.system.data.sqlclient.sni.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
       ]
     },
     "runtime.native.System.IO.Compression/4.3.0": {
@@ -5691,6 +6101,54 @@
         "runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
         "runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.nuspec",
         "runtimes/ubuntu.16.10-x64/native/System.Security.Cryptography.Native.OpenSsl.so"
+      ]
+    },
+    "runtime.win-arm64.runtime.native.System.Data.SqlClient.sni/4.4.0": {
+      "sha512": "LbrynESTp3bm5O/+jGL8v0Qg5SJlTV08lpIpFesXjF6uGNMWqFnUQbYBJwZTeua6E/Y7FIM1C54Ey1btLWupdg==",
+      "type": "package",
+      "path": "runtime.win-arm64.runtime.native.system.data.sqlclient.sni/4.4.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+        "runtime.win-arm64.runtime.native.system.data.sqlclient.sni.nuspec",
+        "runtimes/win-arm64/native/sni.dll",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "runtime.win-x64.runtime.native.System.Data.SqlClient.sni/4.4.0": {
+      "sha512": "38ugOfkYJqJoX9g6EYRlZB5U2ZJH51UP8ptxZgdpS07FgOEToV+lS11ouNK2PM12Pr6X/PpT5jK82G3DwH/SxQ==",
+      "type": "package",
+      "path": "runtime.win-x64.runtime.native.system.data.sqlclient.sni/4.4.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+        "runtime.win-x64.runtime.native.system.data.sqlclient.sni.nuspec",
+        "runtimes/win-x64/native/sni.dll",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "runtime.win-x86.runtime.native.System.Data.SqlClient.sni/4.4.0": {
+      "sha512": "YhEdSQUsTx+C8m8Bw7ar5/VesXvCFMItyZF7G1AUY+OM0VPZUOeAVpJ4Wl6fydBGUYZxojTDR3I6Bj/+BPkJNA==",
+      "type": "package",
+      "path": "runtime.win-x86.runtime.native.system.data.sqlclient.sni/4.4.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+        "runtime.win-x86.runtime.native.system.data.sqlclient.sni.nuspec",
+        "runtimes/win-x86/native/sni.dll",
+        "useSharedDesignerContext.txt",
+        "version.txt"
       ]
     },
     "SC.Shared.Library.Core/3.10.2": {
@@ -6220,6 +6678,74 @@
         "ref/xamarinwatchos10/_._",
         "system.console.4.3.0.nupkg.sha512",
         "system.console.nuspec"
+      ]
+    },
+    "System.Data.SqlClient/4.4.2": {
+      "sha512": "Bv5J2EBAdP7FSgehKYN4O6iw1AaZrw4rFFqwt9vZSjRvC70FpwP2d9UG4aTaI2wh3vfrBKK+tjewowGM2Y6c1w==",
+      "type": "package",
+      "path": "system.data.sqlclient/4.4.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net451/System.Data.SqlClient.dll",
+        "lib/net46/System.Data.SqlClient.dll",
+        "lib/net461/System.Data.SqlClient.dll",
+        "lib/netstandard1.2/System.Data.SqlClient.dll",
+        "lib/netstandard1.3/System.Data.SqlClient.dll",
+        "lib/netstandard2.0/System.Data.SqlClient.dll",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net451/System.Data.SqlClient.dll",
+        "ref/net46/System.Data.SqlClient.dll",
+        "ref/net461/System.Data.SqlClient.dll",
+        "ref/net461/System.Data.SqlClient.xml",
+        "ref/netstandard1.2/System.Data.SqlClient.dll",
+        "ref/netstandard1.2/System.Data.SqlClient.xml",
+        "ref/netstandard1.2/de/System.Data.SqlClient.xml",
+        "ref/netstandard1.2/es/System.Data.SqlClient.xml",
+        "ref/netstandard1.2/fr/System.Data.SqlClient.xml",
+        "ref/netstandard1.2/it/System.Data.SqlClient.xml",
+        "ref/netstandard1.2/ja/System.Data.SqlClient.xml",
+        "ref/netstandard1.2/ko/System.Data.SqlClient.xml",
+        "ref/netstandard1.2/ru/System.Data.SqlClient.xml",
+        "ref/netstandard1.2/zh-hans/System.Data.SqlClient.xml",
+        "ref/netstandard1.2/zh-hant/System.Data.SqlClient.xml",
+        "ref/netstandard1.3/System.Data.SqlClient.dll",
+        "ref/netstandard1.3/System.Data.SqlClient.xml",
+        "ref/netstandard1.3/de/System.Data.SqlClient.xml",
+        "ref/netstandard1.3/es/System.Data.SqlClient.xml",
+        "ref/netstandard1.3/fr/System.Data.SqlClient.xml",
+        "ref/netstandard1.3/it/System.Data.SqlClient.xml",
+        "ref/netstandard1.3/ja/System.Data.SqlClient.xml",
+        "ref/netstandard1.3/ko/System.Data.SqlClient.xml",
+        "ref/netstandard1.3/ru/System.Data.SqlClient.xml",
+        "ref/netstandard1.3/zh-hans/System.Data.SqlClient.xml",
+        "ref/netstandard1.3/zh-hant/System.Data.SqlClient.xml",
+        "ref/netstandard2.0/System.Data.SqlClient.dll",
+        "ref/netstandard2.0/System.Data.SqlClient.xml",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "runtimes/unix/lib/netstandard1.3/System.Data.SqlClient.dll",
+        "runtimes/unix/lib/netstandard2.0/System.Data.SqlClient.dll",
+        "runtimes/win/lib/net451/System.Data.SqlClient.dll",
+        "runtimes/win/lib/net46/System.Data.SqlClient.dll",
+        "runtimes/win/lib/net461/System.Data.SqlClient.dll",
+        "runtimes/win/lib/netstandard1.3/System.Data.SqlClient.dll",
+        "runtimes/win/lib/netstandard2.0/System.Data.SqlClient.dll",
+        "system.data.sqlclient.4.4.2.nupkg.sha512",
+        "system.data.sqlclient.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
       ]
     },
     "System.Diagnostics.Debug/4.3.0": {
@@ -8752,20 +9278,28 @@
         "system.security.cryptography.encoding.nuspec"
       ]
     },
-    "System.Security.Cryptography.OpenSsl/4.3.0": {
-      "sha512": "h4CEgOgv5PKVF/HwaHzJRiVboL2THYCou97zpmhjghx5frc7fIvlkY1jL+lnIQyChrJDMNEXS6r7byGif8Cy4w==",
+    "System.Security.Cryptography.OpenSsl/4.4.0": {
+      "sha512": "is11qLXIHKIvbTipyB1an8FT1ZKavmgf/qJUSIz7ZP830ALRRhPSt5NhplW0/wMk0tNDQWQLluVap6HsQN4HMg==",
       "type": "package",
-      "path": "system.security.cryptography.openssl/4.3.0",
+      "path": "system.security.cryptography.openssl/4.4.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
         "lib/netstandard1.6/System.Security.Cryptography.OpenSsl.dll",
+        "lib/netstandard2.0/System.Security.Cryptography.OpenSsl.dll",
+        "ref/netcoreapp2.0/System.Security.Cryptography.OpenSsl.dll",
+        "ref/netcoreapp2.0/System.Security.Cryptography.OpenSsl.xml",
         "ref/netstandard1.6/System.Security.Cryptography.OpenSsl.dll",
+        "ref/netstandard2.0/System.Security.Cryptography.OpenSsl.dll",
+        "ref/netstandard2.0/System.Security.Cryptography.OpenSsl.xml",
+        "runtimes/unix/lib/netcoreapp2.0/System.Security.Cryptography.OpenSsl.dll",
         "runtimes/unix/lib/netstandard1.6/System.Security.Cryptography.OpenSsl.dll",
-        "system.security.cryptography.openssl.4.3.0.nupkg.sha512",
-        "system.security.cryptography.openssl.nuspec"
+        "system.security.cryptography.openssl.4.4.0.nupkg.sha512",
+        "system.security.cryptography.openssl.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
       ]
     },
     "System.Security.Cryptography.Pkcs/4.5.0": {
@@ -10014,6 +10548,44 @@
         "system.xml.xpath.xdocument.nuspec"
       ]
     },
+    "System.Xml.XPath.XmlDocument/4.3.0": {
+      "sha512": "A/uxsWi/Ifzkmd4ArTLISMbfFs6XpRPsXZonrIqyTY70xi8t+mDtvSM5Os0RqyRDobjMBwIDHDL4NOIbkDwf7A==",
+      "type": "package",
+      "path": "system.xml.xpath.xmldocument/4.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net46/System.Xml.XPath.XmlDocument.dll",
+        "lib/netstandard1.3/System.Xml.XPath.XmlDocument.dll",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/netstandard1.3/System.Xml.XPath.XmlDocument.dll",
+        "ref/netstandard1.3/System.Xml.XPath.XmlDocument.xml",
+        "ref/netstandard1.3/de/System.Xml.XPath.XmlDocument.xml",
+        "ref/netstandard1.3/es/System.Xml.XPath.XmlDocument.xml",
+        "ref/netstandard1.3/fr/System.Xml.XPath.XmlDocument.xml",
+        "ref/netstandard1.3/it/System.Xml.XPath.XmlDocument.xml",
+        "ref/netstandard1.3/ja/System.Xml.XPath.XmlDocument.xml",
+        "ref/netstandard1.3/ko/System.Xml.XPath.XmlDocument.xml",
+        "ref/netstandard1.3/ru/System.Xml.XPath.XmlDocument.xml",
+        "ref/netstandard1.3/zh-hans/System.Xml.XPath.XmlDocument.xml",
+        "ref/netstandard1.3/zh-hant/System.Xml.XPath.XmlDocument.xml",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.xml.xpath.xmldocument.4.3.0.nupkg.sha512",
+        "system.xml.xpath.xmldocument.nuspec"
+      ]
+    },
     "MsaProject.Application/1.0.0": {
       "type": "project",
       "path": "../MsaProject.Application/MsaProject.Application.csproj",
@@ -10036,10 +10608,12 @@
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 12.0.1",
       "MediatR >= 11.1.0",
       "MediatR.Extensions.Microsoft.DependencyInjection >= 11.1.0",
+      "Microsoft.AspNetCore.Authentication.JwtBearer >= 6.0.25",
       "Microsoft.EntityFrameworkCore >= 7.0.12",
       "Microsoft.EntityFrameworkCore.Design >= 7.0.12",
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.12",
       "Microsoft.EntityFrameworkCore.Tools >= 7.0.12",
+      "Microsoft.TeamFoundationServer.Client >= 16.205.1",
       "Middleware >= 5.5.1",
       "MsaProject.Application >= 1.0.0",
       "MsaProject.Dal >= 1.0.0",
@@ -10118,6 +10692,10 @@
             "target": "Package",
             "version": "[11.1.0, )"
           },
+          "Microsoft.AspNetCore.Authentication.JwtBearer": {
+            "target": "Package",
+            "version": "[6.0.25, )"
+          },
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",
             "version": "[7.0.12, )"
@@ -10137,6 +10715,10 @@
             "suppressParent": "All",
             "target": "Package",
             "version": "[7.0.12, )"
+          },
+          "Microsoft.TeamFoundationServer.Client": {
+            "target": "Package",
+            "version": "[16.205.1, )"
           },
           "Middleware": {
             "target": "Package",

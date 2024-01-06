@@ -5,9 +5,11 @@ using MsaProject.Domain;
 using MsaProject.Dtos.CustomerDtos;
 using AutoMapper;
 using MsaProject.Application.Queries.CustomerQueries;
+using Microsoft.AspNetCore.Authorization;
 
 namespace MsaProject.Controllers
 {
+    //[Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class CustomersController : ControllerBase
@@ -66,6 +68,7 @@ namespace MsaProject.Controllers
             var foundCustomers = _mapper.Map<List<CustomerGetDto>>(customers);
             return Ok(foundCustomers);
         }
+        [Authorize]
         [HttpDelete]
         [Route("delete-customer/{customerId}")]
         public async Task<IActionResult> DeleteCustomer(Guid customerId)
