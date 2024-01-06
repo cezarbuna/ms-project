@@ -1,1 +1,15 @@
-<p>home works!</p>
+<div class="restaurant-cards-container"> <!-- Note the 's' after 'cards' -->
+  <p-card *ngFor="let restaurant of restaurants" header="Advanced Card" subheader="Card Subheader" [style]="{ width: '360px' }">
+    <ng-template pTemplate="header">
+      <img alt="Card" src="https://primefaces.org/cdn/primeng/images/usercard.png" />
+    </ng-template>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque
+      quas!
+    </p>
+    <ng-template pTemplate="footer">
+      <p-button label="View Details" icon="pi pi-check" (onClick)="viewDetails(restaurant.id)"></p-button>
+      <p-button label="Book A Table" icon="pi pi-times" styleClass="p-button-secondary" [style]="{ 'margin-left': '.5em' }"></p-button>
+    </ng-template>
+  </p-card>
+</div>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from "@angular/common/http";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-login',
@@ -9,13 +10,15 @@ import { HttpClient, HttpHeaders } from "@angular/common/http";
 export class LoginComponent implements OnInit {
   email: string = '';
   password: string = '';
+  errorMessage: string = '';
 
-  constructor(private httpClient: HttpClient) { }
+  constructor(
+    private httpClient: HttpClient,
+    private router: Router) { }
 
   ngOnInit(): void {
   }
 
-  // Corrected method name from 'obSubmit' to 'onSubmit'
   onSubmit(): void {
     const loginPayload = {
       email: this.email,
@@ -27,12 +30,17 @@ export class LoginComponent implements OnInit {
       .subscribe({
         next: (response: any) => {
           console.log(response);
-          // TODO: Check if the response actually contains a token before trying to access it
-          localStorage.setItem('token', response.token);
-          // Redirect the user to another route if necessary
+          if(response.token){
+            localStorage.setItem('token', response.token);
+            localStorage.setItem('role', response.role);
+            this.router.navigate(['/home']);
+          } else {
+            this.errorMessage = 'Login failed. Please try again.';
+          }
         },
         error: (error) => {
           console.error(error);
+          this.errorMessage = 'Login failed. Please check your credentials.';
         }
       });
   }

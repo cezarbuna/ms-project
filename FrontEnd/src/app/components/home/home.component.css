@@ -1,0 +1,26 @@
+.restaurant-card {
+  flex: 0 0 100%; /* full width on mobile */
+  max-width: 100%;
+}
+
+/* medium screens and up (tablets, small desktops) */
+@media (min-width: 500px) {
+  .restaurant-card {
+    flex: 0 0 50%; /* two cards per row */
+    max-width: 50%;
+  }
+}
+
+/* large screens and up (large desktops, ultrawide screens) */
+@media (min-width: 1000px) { /* adjust this breakpoint as needed */
+  .restaurant-card {
+    flex: 0 0 33.333333%; /* three cards per row */
+    max-width: 33.333333%;
+  }
+}
+
+.restaurant-cards-container { /* This applies to the container of the cards */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem; /* Adjust the gap to your preference */
+}

@@ -13,13 +13,20 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
 import {HttpClientModule} from "@angular/common/http";
 import {FormsModule} from "@angular/forms";
+import {CardModule} from "primeng/card";
+import {ButtonModule} from "primeng/button";
+import { RestaurantComponent } from './components/restaurant/restaurant.component';
+import {ToolbarModule} from "primeng/toolbar";
+import {SplitButtonModule} from "primeng/splitbutton";
+import {AvatarModule} from "primeng/avatar";
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     NavbarComponent,
-    HomeComponent
+    HomeComponent,
+    RestaurantComponent
   ],
   imports: [
     HttpClientModule,
@@ -29,7 +36,12 @@ import {FormsModule} from "@angular/forms";
     MatButtonModule,
     MatCardModule,
     MatFormFieldModule,
-    FormsModule
+    FormsModule,
+    CardModule,
+    ButtonModule,
+    ToolbarModule,
+    SplitButtonModule,
+    AvatarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
