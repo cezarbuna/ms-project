@@ -9,6 +9,6 @@ namespace MsaProject.Domain
     public class Owner : User
     {
         public string OwnerId { get; set; }
-        //public ICollection<Restaurant> Restaurants { get; set; }
+        
     }
 }

@@ -1,0 +1,45 @@
+/* This is the parent container of the form, which takes up the full viewport height */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Use the full screen height */
+  flex-direction: column;
+}
+
+/* Styles for the card containing the form */
+.card {
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  padding: 20px;
+  width: 100%;
+  max-width: 400px; /* Maximum width of the form */
+}
+
+/* Style for the form within the card */
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Style for form elements: input fields and button */
+.input-field,
+.submit-button {
+  margin-top: 10px; /* Space between form elements */
+}
+
+/* Specific styles for the submit button */
+.submit-button {
+  background-color: #003580; /* Similar to Booking.com blue */
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Change button color slightly when hovered for better user experience */
+.submit-button:hover {
+  background-color: #002961;
+}

@@ -8,5 +8,6 @@ namespace MsaProject.Dtos.MenuItemDto
         public string Name { get; set; }
         public int Price { get; set; }
         public Guid MenuId { get; set; }
+        public string ImageUrl { get; set; }
     }
 }

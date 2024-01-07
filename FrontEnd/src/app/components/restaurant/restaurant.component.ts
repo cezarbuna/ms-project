@@ -1,0 +1,54 @@
+import { Component, OnInit } from '@angular/core';
+import {RestaurantService} from "../../services/restaurant.service";
+import {ActivatedRoute, Router} from "@angular/router";
+import {Restaurant} from "../../Models/Restaurant";
+import {MenuService} from "../../services/menu.service";
+import {switchMap} from "rxjs";
+import {Menu} from "../../Models/Menu";
+import {MenuItem} from "../../Models/MenuItem";
+
+@Component({
+  selector: 'app-restaurant',
+  templateUrl: './restaurant.component.html',
+  styleUrls: ['./restaurant.component.css']
+})
+export class RestaurantComponent implements OnInit {
+  restaurant: Restaurant | undefined;
+  menu: Menu | undefined;
+  menuItems: MenuItem[] | undefined;
+  menuVisible: boolean = false;
+  userId: string | null | undefined ;
+
+  constructor(
+    private restaurantService: RestaurantService,
+    private route: ActivatedRoute,
+    private menuService: MenuService,
+    private router: Router) { }
+
+  ngOnInit(): void {
+    this.userId = localStorage.getItem('userId');
+    this.route.params.pipe(
+      switchMap(params => {
+        const id = params['id'];
+        return this.restaurantService.getRestaurantById(id);
+      })
+    ).subscribe({
+      next: (restaurant) => {
+        this.menuService.getMenuItemsByRestaurantId(restaurant.id).subscribe(res => {
+          this.menuItems = res;
+          console.log(this.menuItems);
+        })
+      },
+      error: (error) => console.error('There was an error!', error)
+    });
+  }
+
+  switchMenuVisibility(): void {
+    this.menuVisible = !this.menuVisible;
+  }
+
+  goToReservation(customerId: string){
+    this.router.navigate(['/reservation',customerId]);
+  }
+
+}

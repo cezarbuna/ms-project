@@ -1,0 +1,42 @@
+/* Add this to your restaurant.component.css */
+
+.menu-items-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Adjust minmax for your preferred card size */
+  gap: 1rem; /* Spacing between items */
+  padding: 1rem; /* Padding around the grid */
+}
+
+.menu-item-card {
+  background: #fff; /* Background color for the card */
+  border: 1px solid #ddd; /* Border for the card */
+  border-radius: 0.5rem; /* Rounded corners for the card */
+  overflow: hidden; /* Ensures nothing spills out of the card's boundary */
+}
+
+.menu-item-card img {
+  width: 100%; /* Image takes full width of the card */
+  height: 150px; /* Fixed height for images */
+  object-fit: cover; /* Cover the full area of the element */
+}
+
+.menu-item-card .content {
+  padding: 0.5rem; /* Padding inside the card */
+}
+
+.menu-item-card .title {
+  font-size: 1.2rem; /* Title font size */
+  font-weight: bold; /* Title font weight */
+}
+
+.menu-item-card .price {
+  color: #E53935; /* Price color */
+  font-size: 1.1rem; /* Price font size */
+  margin-top: 0.5rem; /* Spacing above the price */
+}
+
+.menu-item-card .description {
+  font-size: 0.9rem; /* Description font size */
+  color: #555; /* Description font color */
+  margin-top: 0.5rem; /* Spacing above the description */
+}

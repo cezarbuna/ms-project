@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="card">
+    <h1>Login</h1>
+    <form class="form" (ngSubmit)="onSubmit()">
+      <!-- Email input -->
+      <input class="input-field" type="email" placeholder="Email" [(ngModel)]="email" name="email" required>
+      <!-- Password input -->
+      <input class="input-field" type="password" placeholder="Password" [(ngModel)]="password" name="password" required>
+      <!-- Error message -->
+      <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+      <!-- Submit button -->
+      <button class="submit-button" type="submit">Login</button>
+    </form>
+  </div>
+</div>

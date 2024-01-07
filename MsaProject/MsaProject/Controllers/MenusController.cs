@@ -47,10 +47,10 @@ namespace MsaProject.Controllers
             return StatusCode(StatusCodes.Status500InternalServerError, "Error creating new menu");
         }
         [HttpGet]
-        [Route("get-menu-by-id/{menuId}")]
-        public async Task<IActionResult> GetMenuById(Guid  menuId)
+        [Route("get-menu-by-id/{restaurantId}")]
+        public async Task<IActionResult> GetMenuById(Guid  restaurantId)
         {
-            var query = new GetMenuByIdQuery { MenuId = menuId };
+            var query = new GetMenuByIdQuery { RestaurantId = restaurantId };
             var menu = await _mediator.Send(query);
 
             if (menu == null)

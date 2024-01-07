@@ -74,6 +74,10 @@ namespace MsaProject.Dal.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<string>("ImageUrl")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<Guid>("MenuId")
                         .HasColumnType("uniqueidentifier");
 
@@ -150,6 +154,10 @@ namespace MsaProject.Dal.Migrations
 
                     b.Property<int>("ClosingHour")
                         .HasColumnType("int");
+
+                    b.Property<string>("ImageUrl")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
                         .IsRequired()

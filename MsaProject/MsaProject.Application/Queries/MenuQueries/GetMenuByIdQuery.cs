@@ -10,6 +10,6 @@ namespace MsaProject.Application.Queries.MenuQueries
 {
     public class GetMenuByIdQuery : IRequest<Menu>
     {
-        public Guid MenuId { get; set; }
+        public Guid RestaurantId { get; set; }
     }
 }

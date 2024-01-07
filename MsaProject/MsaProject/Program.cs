@@ -1,6 +1,8 @@
 using MediatR;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.IdentityModel.Tokens;
 using MsaProject.Application.Commands.CustomerCommands;
 using MsaProject.Application.Commands.MenuCommands;
 using MsaProject.Application.Commands.MenuItemCommands;
@@ -12,6 +14,7 @@ using MsaProject.Dal;
 using MsaProject.Dal.Repositories;
 using MsaProject.Domain.IRepositories;
 using MsaProject.Services;
+using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -21,6 +24,29 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+var key = "temporary_key_to_be_replaced";
+
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer(options =>
+    {
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuerSigningKey = true,
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(key)),
+            ValidateIssuer = false,
+            ValidateAudience = false
+        };
+    });
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowSpecificOrigin",
+        builder => builder.WithOrigins("http://localhost:4200") // Your Angular app's host and port
+            .AllowAnyHeader()
+            .AllowAnyMethod());
+});
+
+builder.Services.AddSingleton(new JwtTokenService(key));
 
 builder.Services.AddScoped<IScopedService, ScopedService>();
 builder.Services.AddTransient<ITransientService, TransientService>();
@@ -49,7 +75,6 @@ builder.Services.AddMediatR(typeof(CreateOwnerCommand));
 builder.Services.AddMediatR(typeof(Program));
 builder.Services.AddAutoMapper(typeof(Program));
 
-
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -59,8 +84,10 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.UseCors("AllowSpecificOrigin"); // Use the CORS policy
 app.UseHttpsRedirection();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
