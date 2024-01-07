@@ -6,9 +6,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MsaProject.Application.Queries.MenuQueries
+namespace MsaProject.Application.Queries.MenuItemQueries
 {
-    public class GetMenuByIdQuery : IRequest<Menu>
+    public class GetAllMenuItemsByRestaurantIdQuery : IRequest<List<MenuItem>>
     {
         public Guid RestaurantId { get; set; }
     }

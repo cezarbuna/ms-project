@@ -19,6 +19,7 @@ import { RestaurantComponent } from './components/restaurant/restaurant.componen
 import {ToolbarModule} from "primeng/toolbar";
 import {SplitButtonModule} from "primeng/splitbutton";
 import {AvatarModule} from "primeng/avatar";
+import { ReservationComponent } from './components/reservation/reservation.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import {AvatarModule} from "primeng/avatar";
     LoginComponent,
     NavbarComponent,
     HomeComponent,
-    RestaurantComponent
+    RestaurantComponent,
+    ReservationComponent
   ],
   imports: [
     HttpClientModule,

@@ -13,4 +13,5 @@ public class RestaurantPostDto
     public int OpeningHour { get; set; }
     [Required]
     public int ClosingHour { get; set; }
+    public string ImageUrl { get; set; }
 }

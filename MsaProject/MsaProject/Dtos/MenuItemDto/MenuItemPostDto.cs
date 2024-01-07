@@ -10,5 +10,6 @@ namespace MsaProject.Dtos.MenuItemDto
         public int Price { get; set; }
         [Required]
         public Guid MenuId { get; set; }
+        public string ImageUrl { get; set; }
     }
 }

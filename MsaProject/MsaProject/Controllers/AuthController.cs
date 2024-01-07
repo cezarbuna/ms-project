@@ -26,15 +26,18 @@ namespace MsaProject.Controllers
 
             string role = String.Empty;
             string token = String.Empty;
+            Guid userId = Guid.Empty;
 
             if (customer != null && owner == null)
             {
                 role = "Customer";
+                userId = customer.Id;
                 token = _jwtTokenService.GenerateToken(customer.Email, role);
             }
             else if (customer == null && owner != null)
             {
                 role = "Owner";
+                userId = owner.Id;
                 token = _jwtTokenService.GenerateToken(owner.Email, role);
             }
                 

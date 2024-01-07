@@ -21,7 +21,7 @@ namespace MsaProject.Application.QueryHandlers.MenuQueryHandlers
 
         public Task<Menu> Handle(GetMenuByIdQuery request, CancellationToken cancellationToken)
         {
-            return Task.FromResult(menuRepository.GetEntityByID(request.MenuId));
+            return Task.FromResult(menuRepository.GetEntityBy(x => x.RestaurantId == request.RestaurantId));
         }
     }
 }

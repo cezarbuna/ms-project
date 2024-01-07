@@ -8,4 +8,5 @@ public class RestaurantGetDto
     public double Rating { get; set; }
     public int OpeningHour { get; set; }
     public int ClosingHour { get; set; }
+    public string ImageUrl { get; set; }
 }
