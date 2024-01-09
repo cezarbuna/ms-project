@@ -7,6 +7,6 @@ public class TablePostDto
     public Guid RestaurantId { get; set; }
     [Required]
     public int NumberOfSeats { get; set; }
-    [Required]
+    //[Required]
     public bool IsBooked { get; set; }
 }

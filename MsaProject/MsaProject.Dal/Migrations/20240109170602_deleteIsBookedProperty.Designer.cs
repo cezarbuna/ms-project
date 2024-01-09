@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MsaProject.Dal;
 
@@ -11,9 +12,11 @@ using MsaProject.Dal;
 namespace MsaProject.Dal.Migrations
 {
     [DbContext(typeof(MsaProjectDbContext))]
-    partial class MsaProjectDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240109170602_deleteIsBookedProperty")]
+    partial class deleteIsBookedProperty
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -182,9 +185,6 @@ namespace MsaProject.Dal.Migrations
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
-
-                    b.Property<bool>("IsBooked")
-                        .HasColumnType("bit");
 
                     b.Property<int>("NumberOfSeats")
                         .HasColumnType("int");

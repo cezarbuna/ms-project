@@ -1,0 +1,33 @@
+.tables-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.table-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Align button to bottom */
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.table-info {
+  font-size: 1rem;
+  margin-bottom: 0.5rem; /* Space for button */
+}
+
+.table-card button {
+  align-self: center; /* Center the button */
+}
+
+/* Add additional styles based on your design preferences */

@@ -12,6 +12,6 @@ namespace MsaProject.Application.Commands.ReservationCommands
     {
         public Guid CustomerId { get; set; }
         public Guid TableId { get; set; }
-        public DateTime ReservationTime { get; set; }
+        public DateTime ReservationDate { get; set; }
     }
 }

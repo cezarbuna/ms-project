@@ -9,7 +9,7 @@
     </p>
     <ng-template pTemplate="footer">
       <p-button label="View Menu" icon="pi pi-check" (onClick)="switchMenuVisibility()"></p-button>
-      <p-button label="Book A Table" icon="pi pi-times" (onClick)="restaurant && (restaurant.id)"></p-button>
+      <p-button label="Book A Table" icon="pi pi-times" (onClick)="restaurant && goToTableView(restaurant.id)"></p-button>
     </ng-template>
   </p-card>
 </div>

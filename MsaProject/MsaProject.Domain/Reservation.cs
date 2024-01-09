@@ -14,6 +14,6 @@ namespace MsaProject.Domain
         //public Restaurant Restaurant { get; set; }
         public Guid TableId { get; set; }
         public Table Table { get; set; }
-        public DateTime ReservationTime { get; set; }
+        public DateTime ReservationDate { get; set; }
     }
 }

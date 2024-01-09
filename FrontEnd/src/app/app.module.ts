@@ -20,6 +20,8 @@ import {ToolbarModule} from "primeng/toolbar";
 import {SplitButtonModule} from "primeng/splitbutton";
 import {AvatarModule} from "primeng/avatar";
 import { ReservationComponent } from './components/reservation/reservation.component';
+import { ViewTablesComponent } from './components/view-tables/view-tables.component';
+import {CalendarModule} from "primeng/calendar";
 
 @NgModule({
   declarations: [
@@ -28,23 +30,25 @@ import { ReservationComponent } from './components/reservation/reservation.compo
     NavbarComponent,
     HomeComponent,
     RestaurantComponent,
-    ReservationComponent
+    ReservationComponent,
+    ViewTablesComponent
   ],
-  imports: [
-    HttpClientModule,
-    BrowserModule,
-    BrowserAnimationsModule,
-    AppRoutingModule,
-    MatButtonModule,
-    MatCardModule,
-    MatFormFieldModule,
-    FormsModule,
-    CardModule,
-    ButtonModule,
-    ToolbarModule,
-    SplitButtonModule,
-    AvatarModule
-  ],
+    imports: [
+        HttpClientModule,
+        BrowserModule,
+        BrowserAnimationsModule,
+        AppRoutingModule,
+        MatButtonModule,
+        MatCardModule,
+        MatFormFieldModule,
+        FormsModule,
+        CardModule,
+        ButtonModule,
+        ToolbarModule,
+        SplitButtonModule,
+        AvatarModule,
+        CalendarModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

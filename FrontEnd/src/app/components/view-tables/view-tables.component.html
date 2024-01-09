@@ -1,0 +1,12 @@
+<p-calendar [(ngModel)]="selectedDate" (onSelect)="onDateSelect($event)"></p-calendar>
+<div class="tables-container">
+  <div *ngFor="let table of tables" class="table-card">
+    <div class="card-content">
+      <div class="table-info">
+        <p>Table for {{ table.numberOfSeats }}</p>
+        <p>Status: {{ table.isBooked ? 'Booked' : 'Available' }}</p>
+      </div>
+      <button *ngIf="!table.isBooked" pButton type="button" label="Book" (click)="bookTable(table.id)"></button>
+    </div>
+  </div>
+</div>
