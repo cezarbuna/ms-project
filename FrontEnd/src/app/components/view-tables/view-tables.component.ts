@@ -4,6 +4,7 @@ import {TableService} from "../../services/table.service";
 import {Table} from "../../Models/Table";
 import {switchMap} from "rxjs";
 import {RestaurantService} from "../../services/restaurant.service";
+import {formatDate} from "@angular/common";
 
 @Component({
   selector: 'app-view-tables',
@@ -11,7 +12,8 @@ import {RestaurantService} from "../../services/restaurant.service";
   styleUrls: ['./view-tables.component.css']
 })
 export class ViewTablesComponent implements OnInit {
-  restaurantId: string | undefined;
+  selectedDate: Date = new Date();
+  restaurantId: string | undefined | null;
   tables: Table[] | undefined;
   userId: string | undefined | null;
 
@@ -23,20 +25,27 @@ export class ViewTablesComponent implements OnInit {
 
   ngOnInit(): void {
     this.userId = localStorage.getItem('userId');
-    this.route.params.pipe(
-      switchMap(params => {
-        const restaurantId = params['restaurantId'];
-        return this.restaurantService.getRestaurantById(restaurantId);
-      })
-    ).subscribe({
-      next: (restaurant ) => {
-        this.tableService.getAllTablesForRestaurant(restaurant.id).subscribe(res => {
-          this.tables = res;
-          console.log(this.tables);
-        })
-      },
-      error: (error) => console.error('There was an error!', error)
+
+    this.route.paramMap.subscribe(params => {
+      this.restaurantId = params.get('restaurantId');
+      this.fetchTables();
     })
+    // this.route.params.pipe(
+    //   switchMap(params => {
+    //     const restaurantId = params['restaurantId'];
+    //     this.restaurantId = restaurantId;
+    //     // console.log(this.restaurantId);
+    //     return this.restaurantService.getRestaurantById(restaurantId);
+    //   })
+    // ).subscribe({
+    //   next: (restaurant ) => {
+    //     this.tableService.getAllTablesForRestaurant(restaurant.id).subscribe(res => {
+    //       this.tables = res;
+    //       console.log(this.tables);
+    //     })
+    //   },
+    //   error: (error) => console.error('There was an error!', error)
+    // })
   }
 
   bookTable(tableId: string): void {
@@ -48,5 +57,17 @@ export class ViewTablesComponent implements OnInit {
     }
   }
 
+  onDateSelect(event: any): void {
+    this.fetchTables();
+  }
+
+  fetchTables(): void {
+    if(this.restaurantId) {
+      const formattedDate = formatDate(this.selectedDate,'yyyy-MM-dd', 'en-US');
+      this.tableService.getAllAvailableTablesForADay(formattedDate, this.restaurantId).subscribe(res => {
+        this.tables = res;
+      })
+    }
+  }
 
 }
