@@ -29,7 +29,7 @@ namespace MsaProject.Controllers
             {
                 CustomerId = newReservation.CustomerId,
                 TableId = newReservation.TableId,
-                ReservationTime = newReservation.ReservationTime
+                ReservationDate = newReservation.ReservationDate
             };
 
             var reservation = await _mediator.Send(command);

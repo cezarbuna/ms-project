@@ -34,21 +34,25 @@ export class RestaurantComponent implements OnInit {
       })
     ).subscribe({
       next: (restaurant) => {
+        this.restaurant = restaurant;
         this.menuService.getMenuItemsByRestaurantId(restaurant.id).subscribe(res => {
           this.menuItems = res;
           console.log(this.menuItems);
         })
+        console.log(this.restaurant);
       },
       error: (error) => console.error('There was an error!', error)
     });
+
   }
 
   switchMenuVisibility(): void {
     this.menuVisible = !this.menuVisible;
   }
 
-  goToReservation(customerId: string){
-    this.router.navigate(['/reservation',customerId]);
+  goToTableView(restaurantId: string){
+    console.log(this.restaurant);
+    this.router.navigate(['/viewTables',restaurantId]);
   }
 
 }

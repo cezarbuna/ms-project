@@ -44,7 +44,7 @@ namespace MsaProject.Controllers
             else if(customer == null && owner == null)
                 return Unauthorized("Invalid credentials");
 
-            return Ok(new { Token = token, Role = role });
+            return Ok(new { Token = token, Role = role, UserId = userId });
         }
     }
 }

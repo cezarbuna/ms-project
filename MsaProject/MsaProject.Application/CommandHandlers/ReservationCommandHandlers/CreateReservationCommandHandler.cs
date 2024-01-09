@@ -31,7 +31,7 @@ namespace MsaProject.Application.CommandHandlers.ReservationCommandHandlers
                 {
                     TableId = request.TableId,
                     CustomerId = request.CustomerId,
-                    ReservationTime = request.ReservationTime
+                    ReservationDate = request.ReservationDate
                 };
 
                 reservationRepository.Insert(reservation);

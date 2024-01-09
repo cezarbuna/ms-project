@@ -8,5 +8,5 @@ public class ReservationPostDto
     [Required]
     public Guid TableId { get; set; }
     [Required]
-    public DateTime ReservationTime { get; set; }
+    public DateTime ReservationDate { get; set; }
 }
