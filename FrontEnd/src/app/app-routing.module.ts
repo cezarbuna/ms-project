@@ -11,8 +11,8 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'home', component: HomeComponent },
   { path: 'restaurant/:id', component: RestaurantComponent},
-  { path: 'reservation/:customerId/:tableId', component: ReservationComponent},
   { path: 'viewTables/:restaurantId', component: ViewTablesComponent},
+  { path: 'reservation/:restaurantId/:customerId/:tableId/:maxSeats/:reservationDate', component: ReservationComponent},
   { path: '', component: HomeComponent }, //default route
 ];
 

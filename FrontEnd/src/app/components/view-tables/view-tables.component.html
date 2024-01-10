@@ -6,7 +6,7 @@
         <p>Table for {{ table.numberOfSeats }}</p>
         <p>Status: {{ table.isBooked ? 'Booked' : 'Available' }}</p>
       </div>
-      <button *ngIf="!table.isBooked" pButton type="button" label="Book" (click)="bookTable(table.id)"></button>
+      <button *ngIf="!table.isBooked" pButton type="button" label="Book" (click)="bookTable(table.id, table.numberOfSeats)"></button>
     </div>
   </div>
 </div>

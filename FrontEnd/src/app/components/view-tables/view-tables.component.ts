@@ -5,6 +5,8 @@ import {Table} from "../../Models/Table";
 import {switchMap} from "rxjs";
 import {RestaurantService} from "../../services/restaurant.service";
 import {formatDate} from "@angular/common";
+import {CustomerService} from "../../services/customer.service";
+import {Customer} from "../../Models/Customer";
 
 @Component({
   selector: 'app-view-tables',
@@ -16,12 +18,14 @@ export class ViewTablesComponent implements OnInit {
   restaurantId: string | undefined | null;
   tables: Table[] | undefined;
   userId: string | undefined | null;
+  customer: Customer | undefined;
 
   constructor(
     private route: ActivatedRoute,
     private router: Router,
     private tableService: TableService,
-    private restaurantService: RestaurantService) { }
+    private restaurantService: RestaurantService,
+    private customerService: CustomerService) { }
 
   ngOnInit(): void {
     this.userId = localStorage.getItem('userId');
@@ -48,9 +52,15 @@ export class ViewTablesComponent implements OnInit {
     // })
   }
 
-  bookTable(tableId: string): void {
-    if (this.userId) {
-      this.router.navigate(['/reservation', this.userId, tableId]);
+  bookTable(tableId: string,maxSeats: Number): void {
+    const formattedDate = formatDate(this.selectedDate, 'yyyy-MM-dd', 'en-US');
+    if (this.userId && this.restaurantId) {
+      this.customerService.getCustomerById(this.userId).subscribe(res => {
+        this.customer = res;
+        console.log(this.customer);
+        this.router.navigate(['/reservation', this.restaurantId, this.userId, tableId, maxSeats, formattedDate]);
+      })
+
     } else {
       // Redirect to login or handle accordingly
       this.router.navigate(['/login']);

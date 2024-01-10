@@ -16,4 +16,7 @@ export class TableService {
   getAllAvailableTablesForADay(date: string, restaurantId: string): Observable<Table[]>{
     return this.httpClient.get<Table[]>(`https://localhost:7294/api/Tables/get-all-tables-by-date/${date}/${restaurantId}`);
   }
+  getTableById(tableId: string): Observable<Table> {
+    return this.httpClient.get<Table>(`https://localhost:7294/api/Tables/get-table-by-id/${tableId}`);
+  }
 }
