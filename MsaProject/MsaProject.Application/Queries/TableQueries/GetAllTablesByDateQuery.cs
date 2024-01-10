@@ -10,7 +10,7 @@ namespace MsaProject.Application.Queries.TableQueries
 {
     public class GetAllTablesByDateQuery : IRequest<List<Table>>
     {
-        public DateOnly Date { get; set; }
+        public DateTime Date { get; set; }
         public Guid RestaurantId { get; set; }
     }
 }

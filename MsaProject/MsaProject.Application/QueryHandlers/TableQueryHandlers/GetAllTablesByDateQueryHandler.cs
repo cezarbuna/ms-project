@@ -29,29 +29,29 @@ namespace MsaProject.Application.QueryHandlers.TableQueryHandlers
 
             foreach (var table in tables)
             {
-                //    if (reservationRepository.GetEntityBy(x => x.TableId == table.Id).ReservationDate == request.Date)
-                //    {
-                //        result.Add(new Table
-                //        {
-                //            Id = table.Id,
-                //            NumberOfSeats = table.NumberOfSeats,
-                //            Restaurant = table.Restaurant,
-                //            RestaurantId = table.RestaurantId,
-                //            IsBooked = true
-                //        });
-                //    }
-                //    else
-                //    {
-                //        result.Add(new Table
-                //        {
-                //            Id = table.Id,
-                //            NumberOfSeats = table.NumberOfSeats,
-                //            Restaurant = table.Restaurant,
-                //            RestaurantId = table.RestaurantId,
-                //            IsBooked = false
-                //        });
-                //    }
-                //}
+                var reservation = reservationRepository.GetEntityBy(x => x.TableId == table.Id && x.ReservationDate.Date == request.Date.Date);
+                if(reservation != null)
+                {
+                    result.Add(new Table
+                    {
+                        Id = table.Id,
+                        Restaurant = table.Restaurant,
+                        RestaurantId = table.RestaurantId,
+                        NumberOfSeats = table.NumberOfSeats,
+                        IsBooked = true
+                    });
+                }
+                else
+                {
+                    result.Add(new Table
+                    {
+                        Id = table.Id,
+                        Restaurant = table.Restaurant,
+                        RestaurantId = table.RestaurantId,
+                        NumberOfSeats = table.NumberOfSeats,
+                        IsBooked = false
+                    });
+                }
             }
             return Task.FromResult(result.ToList());
         }

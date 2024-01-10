@@ -53,11 +53,25 @@ namespace MsaProject.Controllers
             var foundTable = _mapper.Map<TableGetDto>(table);
             return Ok(foundTable);
         }
+        
         [HttpGet]
         [Route("get-all-tables-by-restaurant-id/{restaurantId}")]
         public async Task<IActionResult> GetAllTablesByRestaurantId(Guid restaurantId)
         {
             var query = new GetAllTablesByRestaurantIdQuery { RestaurantId = restaurantId };
+            var tables = await _mediator.Send(query);
+
+            if (tables == null)
+                return NotFound();
+
+            var foundTables = _mapper.Map<List<TableGetDto>>(tables);
+            return Ok(foundTables);
+        }
+        [HttpGet]
+        [Route("get-all-tables-by-date/{date}/{restaurantId}")]
+        public async Task<IActionResult> GetAllTablesByDate(DateTime date, Guid restaurantId)
+        {
+            var query = new GetAllTablesByDateQuery { Date = date, RestaurantId = restaurantId };
             var tables = await _mediator.Send(query);
 
             if (tables == null)
