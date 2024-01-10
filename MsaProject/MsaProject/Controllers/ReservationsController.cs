@@ -51,7 +51,7 @@ namespace MsaProject.Controllers
             };
             var reservation = await _mediator.Send(query);
 
-            if (reservation != null)
+            if (reservation == null)
             {
                 return NotFound();
             }
@@ -68,13 +68,30 @@ namespace MsaProject.Controllers
             };
             var reservations = await _mediator.Send(query);
 
-            if (reservations != null)
+            if (reservations == null)
             {
                 return NotFound();
             }
             var foundReservations = _mapper.Map<List<ReservationGetDto>>(reservations);
             return Ok(foundReservations);
+        }[HttpGet]
+        [Route("get-reservations-by-customer-id-with-info/{customerId}")]
+        public async Task<IActionResult> GetReservationsByCustomerIdWithInfo(Guid customerId)
+        {
+            var query = new GetAllReservationsWithInfoQuery
+            {
+                CustomerId = customerId
+            };
+            var reservations = await _mediator.Send(query);
+
+            if (reservations == null)
+            {
+                return NotFound();
+            }
+            
+            return Ok(reservations);
         }
+        
         [HttpDelete]
         [Route("delete-reservation/{reservationId}")]
         public async Task<IActionResult> DeleteReservation(Guid reservationId)

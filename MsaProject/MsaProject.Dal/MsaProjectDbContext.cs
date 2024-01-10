@@ -26,7 +26,7 @@ namespace MsaProject.Dal
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder
-                .UseSqlServer(@"Server=DESKTOP-DLVFJ7V\SQLEXPRESS;Database=Database1;Trusted_Connection=True;TrustServerCertificate=True;",
+                .UseSqlServer(@"Server=DESKTOP-DLVFJ7V\SQLEXPRESS;Database=Database1;Trusted_Connection=True;TrustServerCertificate=True;MultipleActiveResultSets=True;",
                 b => b.MigrationsAssembly("MsaProject.Dal"))
                 .EnableSensitiveDataLogging();
         }

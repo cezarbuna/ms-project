@@ -22,6 +22,7 @@ import {AvatarModule} from "primeng/avatar";
 import { ReservationComponent } from './components/reservation/reservation.component';
 import { ViewTablesComponent } from './components/view-tables/view-tables.component';
 import {CalendarModule} from "primeng/calendar";
+import { OwnedReservationsComponent } from './components/owned-reservations/owned-reservations.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import {CalendarModule} from "primeng/calendar";
     HomeComponent,
     RestaurantComponent,
     ReservationComponent,
-    ViewTablesComponent
+    ViewTablesComponent,
+    OwnedReservationsComponent
   ],
     imports: [
         HttpClientModule,
