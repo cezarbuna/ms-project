@@ -7,6 +7,7 @@ import {RestaurantService} from "../../services/restaurant.service";
 import {formatDate} from "@angular/common";
 import {CustomerService} from "../../services/customer.service";
 import {Customer} from "../../Models/Customer";
+import {FormControl} from "@angular/forms";
 
 @Component({
   selector: 'app-view-tables',
@@ -14,7 +15,8 @@ import {Customer} from "../../Models/Customer";
   styleUrls: ['./view-tables.component.css']
 })
 export class ViewTablesComponent implements OnInit {
-  selectedDate: Date = new Date();
+  date = new FormControl(new Date());
+  selectedDate: Date  = new Date();
   restaurantId: string | undefined | null;
   tables: Table[] | undefined;
   userId: string | undefined | null;
@@ -34,23 +36,34 @@ export class ViewTablesComponent implements OnInit {
       this.restaurantId = params.get('restaurantId');
       this.fetchTables();
     })
-    // this.route.params.pipe(
-    //   switchMap(params => {
-    //     const restaurantId = params['restaurantId'];
-    //     this.restaurantId = restaurantId;
-    //     // console.log(this.restaurantId);
-    //     return this.restaurantService.getRestaurantById(restaurantId);
-    //   })
-    // ).subscribe({
-    //   next: (restaurant ) => {
-    //     this.tableService.getAllTablesForRestaurant(restaurant.id).subscribe(res => {
-    //       this.tables = res;
-    //       console.log(this.tables);
-    //     })
-    //   },
-    //   error: (error) => console.error('There was an error!', error)
-    // })
+    this.route.params.pipe(
+      switchMap(params => {
+        const restaurantId = params['restaurantId'];
+        this.restaurantId = restaurantId;
+        // console.log(this.restaurantId);
+        return this.restaurantService.getRestaurantById(restaurantId);
+      })
+    ).subscribe({
+      next: (restaurant ) => {
+        this.tableService.getAllTablesForRestaurant(restaurant.id).subscribe(res => {
+          this.tables = res;
+          console.log(this.tables);
+        })
+      },
+      error: (error) => console.error('There was an error!', error)
+    })
   }
+
+  // bookTable(tableId: string, maxSeats: Number): void {
+  //   // Format the selectedDate to 'yyyy-MM-dd'
+  //   const formattedDate = formatDate(this.selectedDate, 'yyyy-MM-dd', 'en-US');
+  //   if (this.userId && this.restaurantId) {
+  //     this.router.navigate(['/reservation', this.restaurantId, this.userId, tableId, maxSeats, formattedDate]);
+  //   } else {
+  //     // Redirect to login or handle accordingly
+  //     this.router.navigate(['/login']);
+  //   }
+  // }
 
   bookTable(tableId: string,maxSeats: Number): void {
     const formattedDate = formatDate(this.selectedDate, 'yyyy-MM-dd', 'en-US');

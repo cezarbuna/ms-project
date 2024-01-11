@@ -1,18 +1,49 @@
-<div class="restaurant-cards-container"> <!-- Note the 's' after 'cards' -->
-  <p-card header="Advanced Card" subheader="Card Subheader" [style]="{ width: '360px' }">
-    <ng-template pTemplate="header">
-      <img alt="Card" src="https://primefaces.org/cdn/primeng/images/usercard.png" />
-    </ng-template>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque
-      quas!
-    </p>
-    <ng-template pTemplate="footer">
-      <p-button label="View Menu" icon="pi pi-check" (onClick)="switchMenuVisibility()"></p-button>
-      <p-button label="Book A Table" icon="pi pi-times" (onClick)="restaurant && goToTableView(restaurant.id)"></p-button>
-    </ng-template>
-  </p-card>
+<!--<div class="restaurant-cards-container"> &lt;!&ndash; Note the 's' after 'cards' &ndash;&gt;-->
+<!--  <p-card header="Advanced Card" subheader="Card Subheader" [style]="{ width: '360px' }">-->
+<!--    <ng-template pTemplate="header">-->
+<!--      <img alt="Card" src="https://primefaces.org/cdn/primeng/images/usercard.png" />-->
+<!--    </ng-template>-->
+<!--    <p>-->
+<!--      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque-->
+<!--      quas!-->
+<!--    </p>-->
+<!--    <ng-template pTemplate="footer">-->
+<!--      <p-button label="View Menu" icon="pi pi-check" (onClick)="switchMenuVisibility()"></p-button>-->
+<!--      <p-button label="Book A Table" icon="pi pi-times" (onClick)="restaurant && goToTableView(restaurant.id)"></p-button>-->
+<!--    </ng-template>-->
+<!--  </p-card>-->
+<!--</div>-->
+<!--<div class="menu-items-container" *ngIf="menuVisible">-->
+<!--  <div class="menu-item-card" *ngFor="let item of menuItems">-->
+<!--&lt;!&ndash;    <img [src]="item.imageUrl" alt="{{item.name}}">&ndash;&gt;-->
+<!--    <div class="content">-->
+<!--      <div class="title">{{ item.name }}</div>-->
+<!--      <div class="price">{{ item.price }} Lei</div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+
+<div class="restaurants-container" *ngIf="restaurant">
+  <mat-card class="example-card">
+
+    <img mat-card-image src="assets/our-food.jpg" alt="Photo of a Shiba Inu" class="mat-img">
+    <mat-card-header>
+      <!--      <div mat-card-avatar class="example-header-image"></div>-->
+      <mat-card-title>{{restaurant.name}}</mat-card-title>
+      <!--      <mat-card-subtitle>Dog Breed</mat-card-subtitle>-->
+    </mat-card-header>
+    <mat-card-content>
+      <p>Opening Hours:   {{restaurant.openingHour}}</p>
+      <p>Closing Hours:   {{restaurant.closingHour}}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button class="left-action" (click)="switchMenuVisibility()">View Menu</button>
+      <button mat-raised-button class="right-action" (click)="goToTableView(restaurant.id)">Book A Table</button>
+    </mat-card-actions>
+  </mat-card>
+
 </div>
+
 <div class="menu-items-container" *ngIf="menuVisible">
   <div class="menu-item-card" *ngFor="let item of menuItems">
 <!--    <img [src]="item.imageUrl" alt="{{item.name}}">-->
@@ -22,4 +53,5 @@
     </div>
   </div>
 </div>
+
 

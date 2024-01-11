@@ -1,19 +1,7 @@
 /* owned-reservations.component.css */
-:host {
-  display: block;
-  padding: 1rem;
-}
-
-.reservation-card {
-  margin-bottom: 1rem;
-  box-shadow: 0 3px 6px #ccc;
-}
-
-.reservation-date,
-.reservation-seats {
-  margin: 0.5rem 0;
-}
-
-p-footer button {
-  width: 100%;
+.single-reservation {
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 10%;
 }

@@ -1,0 +1,13 @@
+.reservation-form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.reservation-card{
+  margin-top: 10px;
+  margin-left: 45px;
+  margin-right: 45px;
+  border-radius: 7%;
+}

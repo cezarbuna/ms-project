@@ -1,15 +1,37 @@
-<div class="restaurant-cards-container"> <!-- Note the 's' after 'cards' -->
-  <p-card *ngFor="let restaurant of restaurants" header="Advanced Card" subheader="Card Subheader" [style]="{ width: '360px' }">
-    <ng-template pTemplate="header">
-      <img alt="Card" src="https://primefaces.org/cdn/primeng/images/usercard.png" />
-    </ng-template>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque
-      quas!
-    </p>
-    <ng-template pTemplate="footer">
-      <p-button label="View Details" icon="pi pi-check" (onClick)="viewDetails(restaurant.id)"></p-button>
-      <p-button label="Book A Table" icon="pi pi-times" styleClass="p-button-secondary" [style]="{ 'margin-left': '.5em' }"></p-button>
-    </ng-template>
-  </p-card>
+<!--<div class="restaurant-cards-container"> &lt;!&ndash; Note the 's' after 'cards' &ndash;&gt;-->
+<!--  <p-card *ngFor="let restaurant of restaurants" header="Advanced Card" subheader="Card Subheader" [style]="{ width: '360px' }">-->
+<!--    <ng-template pTemplate="header">-->
+<!--      <img alt="Card" src="https://primefaces.org/cdn/primeng/images/usercard.png" />-->
+<!--    </ng-template>-->
+<!--    <p>-->
+<!--      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque-->
+<!--      quas!-->
+<!--    </p>-->
+<!--    <ng-template pTemplate="footer">-->
+<!--      <p-button label="View Details" icon="pi pi-check" (onClick)="viewDetails(restaurant.id)"></p-button>-->
+<!--      <p-button label="Book A Table" icon="pi pi-times" styleClass="p-button-secondary" [style]="{ 'margin-left': '.5em' }"></p-button>-->
+<!--    </ng-template>-->
+<!--  </p-card>-->
+<!--</div>-->
+
+<div class="restaurants-container">
+  <mat-card *ngFor="let restaurant of restaurants" class="example-card">
+
+    <img mat-card-image src="assets/our-food.jpg" alt="Photo of a Shiba Inu" class="mat-img">
+    <mat-card-header>
+      <!--      <div mat-card-avatar class="example-header-image"></div>-->
+      <mat-card-title>{{restaurant.name}}</mat-card-title>
+      <!--      <mat-card-subtitle>Dog Breed</mat-card-subtitle>-->
+    </mat-card-header>
+    <mat-card-content>
+      <p>Opening Hours:   {{restaurant.openingHour}}</p>
+      <p>Closing Hours:   {{restaurant.closingHour}}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <a mat-raised-button class="left-action" (click)="viewDetails(restaurant.id)">DISCOVER</a>
+      <a mat-raised-button class="right-action" (click)="goToTableView(restaurant.id)">BOOK TABLE</a>
+    </mat-card-actions>
+  </mat-card>
+
 </div>
+

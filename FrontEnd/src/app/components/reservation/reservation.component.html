@@ -1,27 +1,31 @@
-<!-- reservations.component.html -->
+
 <div *ngIf="restaurant.name && customer.fullName">
-  <h1>Book a Table at {{ restaurant.name }}</h1>
-
   <form class="form" (ngSubmit)="createReservation()">
-    <div>
-      <label>Restaurant Name</label>
-      <input type="text" [value]="restaurant.name" readonly>
-    </div>
-    <div>
-      <label>Number of Seats</label>
-      <select name="seats" required>
-        <option *ngFor="let seat of [].constructor(maxSeats)" [value]="seat">{{ seat }}</option>
-      </select>
-    </div>
-    <div>
-      <label>Customer Name</label>
-      <input type="text" [value]="customer.fullName" readonly>
-    </div>
-    <div>
-      <label>Reservation Date</label>
-      <input type="text" [value]="reservationDate | date:'fullDate'" readonly>
-    </div>
-
-    <button class="submit-button" type="submit">Create Reservation</button>
+    <mat-card class="reservation-card">
+      <mat-card-content class="reservation-form">
+        <mat-form-field>
+          <mat-label>Restaurant Name: </mat-label>
+          <input matInput type="text" [value]="restaurant.name" readonly>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Number of Seats: </mat-label>
+          <mat-select>
+            <mat-option *ngFor="let seat of [].constructor(maxSeats); let i = index;" [value]="i+1">{{i + 1}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Customer Name: </mat-label>
+          <input matInput type="text" [value]="customer.fullName" readonly>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Reservation Date: </mat-label>
+          <input matInput type="text" [value]="reservationDate | date:'fullDate'" readonly>
+        </mat-form-field>
+      </mat-card-content>
+      <mat-card-footer class="reservation-form">
+        <button mat-raised-button type="submit">Create Reservation</button>
+      </mat-card-footer>
+    </mat-card>
   </form>
 </div>
+

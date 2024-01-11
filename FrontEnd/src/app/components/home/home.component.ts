@@ -28,5 +28,8 @@ export class HomeComponent implements OnInit {
   viewDetails(restaurantId: string): void {
     this.router.navigate(['/restaurant', restaurantId]);
   }
+  goToTableView(restaurantId: string){
+    this.router.navigate(['/viewTables',restaurantId]);
+  }
 
 }

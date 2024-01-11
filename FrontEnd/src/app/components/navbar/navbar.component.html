@@ -1,14 +1,28 @@
-<nav class="navbar">
-  <div class="navbar-container">
-    <a href="#" class="navbar-brand">Diner Dash</a>
-    <div class="navbar-links">
-      <a mat-button routerLink="login">Login</a>
-      <a mat-button>Register</a>
-      <a mat-button routerLink="home">Restaurants</a>
-      <a mat-button (click)="goToOwnedReservations()">Reservations</a>
-      <a mat-button (click)="logOut()">Logout</a>
-    </div>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="topnav">
+  <a routerLink="home" class="active">Diner Dash</a>
+  <div #home id="myLinks">
+    <a mat-button routerLink="home" (click)="home.hidden = true">Home</a>
+    <a mat-button routerLink="" (click)="home.hidden = true">View Restaurants</a>
+    <a mat-button (click)="goToOwnedReservations(); home.hidden = true;">My Reservations</a>
+    <a mat-button *ngIf="!isLoggedIn()" routerLink="login" (click)="home.hidden = true">Login</a>
+    <a mat-button *ngIf="!isLoggedIn()" routerLink="login" (click)="home.hidden = true">Register</a>
+    <a mat-button *ngIf="isLoggedIn()" (click)="logOut(); home.hidden = true;">Logout</a>
   </div>
-</nav>
+  <a href="javascript:void(0);" class="icon"(click)="home.hidden = false; myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+
+
+
+
+
+
+
+
+
 
 

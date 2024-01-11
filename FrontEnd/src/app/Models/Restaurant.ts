@@ -5,4 +5,5 @@ export interface Restaurant {
   rating: number;
   openingHour: number;
   closingHour: number;
+  imageUrl: string;
 }

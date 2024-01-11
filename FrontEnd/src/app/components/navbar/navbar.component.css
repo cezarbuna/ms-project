@@ -1,27 +1,81 @@
-.navbar {
-  background-color: #003580; /* Similar to Booking.com blue */
-  color: white;
-  padding: 0.5em 1em;
+/*.navbar {*/
+/*  background-color: #003580; !* Similar to Booking.com blue *!*/
+/*  color: white;*/
+/*  padding: 0.5em 1em;*/
+/*}*/
+
+/*.navbar-container {*/
+/*  display: flex;*/
+/*  justify-content: space-between;*/
+/*  align-items: center;*/
+/*}*/
+
+/*.navbar-brand {*/
+/*  font-size: 1.5em;*/
+/*  color: white;*/
+/*  text-decoration: none;*/
+/*}*/
+
+/*.navbar-links a {*/
+/*  color: white;*/
+/*  margin-left: 20px;*/
+/*  text-decoration: none;*/
+/*}*/
+
+/*.navbar-links a:hover {*/
+/*  text-decoration: underline;*/
+/*}*/
+
+/* ... existing styles ... */
+/* Existing styles... */
+
+/* Mobile Menu button */
+
+/* navbar.component.css */
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+  position: relative;
 }
 
-.navbar-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+/* Hide the links inside the navigation menu (except for logo/home) */
+.topnav #myLinks {
+  display: none;
 }
 
-.navbar-brand {
-  font-size: 1.5em;
+/* Style navigation menu links */
+.topnav a {
   color: white;
+  padding: 14px 16px;
   text-decoration: none;
+  font-size: 17px;
+  display: block;
 }
 
-.navbar-links a {
+/* Style the hamburger menu */
+.topnav a.icon {
+  background: black;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+/* Add a grey background color on mouse-over */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Style the active link (or home/logo) */
+.active {
+  background-color: red;
   color: white;
-  margin-left: 20px;
-  text-decoration: none;
 }
 
-.navbar-links a:hover {
-  text-decoration: underline;
+.topnav #myLinks.show {
+  display: block;
 }
+
+

@@ -47,6 +47,7 @@ export class RestaurantComponent implements OnInit {
   }
 
   switchMenuVisibility(): void {
+    console.log('TOGGLED');
     this.menuVisible = !this.menuVisible;
   }
 

@@ -1,12 +1,37 @@
-<p-calendar [(ngModel)]="selectedDate" (onSelect)="onDateSelect($event)"></p-calendar>
-<div class="tables-container">
-  <div *ngFor="let table of tables" class="table-card">
-    <div class="card-content">
-      <div class="table-info">
-        <p>Table for {{ table.numberOfSeats }}</p>
-        <p>Status: {{ table.isBooked ? 'Booked' : 'Available' }}</p>
-      </div>
-      <button *ngIf="!table.isBooked" pButton type="button" label="Book" (click)="bookTable(table.id, table.numberOfSeats)"></button>
-    </div>
-  </div>
+<!--<p-calendar [(ngModel)]="selectedDate" (onSelect)="onDateSelect($event)"></p-calendar>-->
+<!--<div class="tables-container">-->
+<!--  <div *ngFor="let table of tables" class="table-card">-->
+<!--    <div class="card-content">-->
+<!--      <div class="table-info">-->
+<!--        <p>Table for {{ table.numberOfSeats }}</p>-->
+<!--        <p>Status: {{ table.isBooked ? 'Booked' : 'Available' }}</p>-->
+<!--      </div>-->
+<!--      <button *ngIf="!table.isBooked" pButton type="button" label="Book" (click)="bookTable(table.id, table.numberOfSeats)"></button>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+<div class="date-container" style="align-content: center">
+  <mat-card class="date-picker-card">
+    <mat-form-field>
+      <mat-label>Choose a date</mat-label>
+      <input matInput [matDatepicker]="picker" [(ngModel)]="selectedDate" (dateChange)="onDateSelect($event)" >
+      <mat-hint>MM/DD/YYYY</mat-hint>
+      <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+  </mat-card>
 </div>
+
+<div class="tables-container">
+  <mat-card *ngFor="let table of tables" class="table-card">
+    <mat-card-content>
+      <h2>Table for {{table.numberOfSeats}} people</h2>
+      Number of Available seats: {{table.numberOfSeats}}
+    </mat-card-content>
+    <mat-card-actions align="end">
+      <a *ngIf="!table.isBooked" mat-raised-button (click)="bookTable(table.id, table.numberOfSeats)">BOOK TABLE</a>
+    </mat-card-actions>
+  </mat-card>
+</div>
+
+
