@@ -13,6 +13,7 @@ import {MenuItem} from "../../Models/MenuItem";
   styleUrls: ['./restaurant.component.css']
 })
 export class RestaurantComponent implements OnInit {
+  serverUrl: string = 'https://localhost:7294';
   restaurant: Restaurant | undefined;
   menu: Menu | undefined;
   menuItems: MenuItem[] | undefined;

@@ -30,7 +30,8 @@ namespace MsaProject.Controllers
             {
                 MenuId = newMenuItem.MenuId,
                 Name = newMenuItem.Name,
-                 Price = newMenuItem.Price
+                 Price = newMenuItem.Price,
+                 ImageUrl = newMenuItem.ImageUrl
             };
 
             var menuItem = await _mediator.Send(command);

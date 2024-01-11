@@ -35,8 +35,9 @@
 
 .topnav {
   overflow: hidden;
-  background-color: #333;
+  background-color: red;
   position: relative;
+  border-radius: 5%;
 }
 
 /* Hide the links inside the navigation menu (except for logo/home) */
@@ -55,7 +56,7 @@
 
 /* Style the hamburger menu */
 .topnav a.icon {
-  background: black;
+  background: red;
   display: block;
   position: absolute;
   right: 0;
@@ -64,7 +65,7 @@
 
 /* Add a grey background color on mouse-over */
 .topnav a:hover {
-  background-color: #ddd;
+  background-color: red;
   color: black;
 }
 

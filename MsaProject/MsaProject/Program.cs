@@ -62,7 +62,7 @@ builder.Services.AddScoped<IReservationRepository, ReservationRepository>();
 
 builder.Services.AddDbContext<MsaProjectDbContext>(options =>
         options.UseSqlServer(builder.Configuration
-        .GetConnectionString(@"Server=DESKTOP-DLVFJ7V\SQLEXPRESS;Database=Database1;Trusted_Connection=True;TrustServerCertificate=True;MultipleActiveResultSets=True;")));
+        .GetConnectionString(@"Server=DESKTOP-DLVFJ7V\SQLEXPRESS;Database=Database2;Trusted_Connection=True;TrustServerCertificate=True;MultipleActiveResultSets=True;")));
 
 builder.Services.AddMediatR(typeof(CreateCustomerCommand));
 builder.Services.AddMediatR(typeof(CreateMenuItemCommand));
@@ -91,5 +91,7 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.UseStaticFiles();
 
 app.Run();

@@ -34,4 +34,8 @@
     <ProjectReference Include="..\MsaProject.Domain\MsaProject.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="NewFolder\" />
+  </ItemGroup>
+
 </Project>

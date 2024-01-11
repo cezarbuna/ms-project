@@ -31,7 +31,8 @@ namespace MsaProject.Application.CommandHandlers.MenuItemCommandHandlers
                 {
                     Name = request.Name,
                     Price = request.Price,
-                    MenuId = request.MenuId
+                    MenuId = request.MenuId,
+                    ImageUrl = request.ImageUrl
                 };
 
                 menuItemRepository.Insert(newMenuItem);

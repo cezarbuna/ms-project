@@ -74,7 +74,7 @@ export class ReservationComponent implements OnInit {
     this.httpClient.post('https://localhost:7294/api/Reservations', reservationBody).subscribe(res => {
       console.log('Reservation creation response:');
       console.log(res);
-      alert('Reservation created successfully');
+      // alert('Reservation created successfully');
       this.router.navigate(['home']);
     });
   }

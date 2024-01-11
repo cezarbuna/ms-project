@@ -12,6 +12,7 @@ namespace MsaProject.Controllers
     {
         public readonly IMapper _mapper;
         public readonly IMediator _mediator;
+        
 
         public RestaurantsController(IMapper mapper, IMediator mediator)
         {
@@ -31,7 +32,8 @@ namespace MsaProject.Controllers
                  Rating = newRestaurant.Rating,
                   NumberOfTables = newRestaurant.NumberOfTables,
                   OpeningHour = newRestaurant.OpeningHour,
-                  ClosingHour = newRestaurant.ClosingHour
+                  ClosingHour = newRestaurant.ClosingHour,
+                  ImageUrl = newRestaurant.ImageUrl
             };
 
             var restaurant = await _mediator.Send(command);

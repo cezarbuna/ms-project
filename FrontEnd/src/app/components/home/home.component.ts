@@ -9,6 +9,7 @@ import {Router} from "@angular/router";
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  serverUrl: string = 'https://localhost:7294';
   restaurants: Restaurant[] = [];
 
   constructor(
@@ -18,6 +19,8 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.restaurantService.getAllRestaurants().subscribe({
       next: (data) => {
+        console.log('Logged:');
+        console.log(data);
         this.restaurants = data;
       },
       error: (error) => {

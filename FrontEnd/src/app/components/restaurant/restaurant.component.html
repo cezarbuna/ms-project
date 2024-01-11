@@ -26,13 +26,14 @@
 <div class="restaurants-container" *ngIf="restaurant">
   <mat-card class="example-card">
 
-    <img mat-card-image src="assets/our-food.jpg" alt="Photo of a Shiba Inu" class="mat-img">
+    <img mat-card-image [src]="serverUrl + restaurant.imageUrl" alt="Photo of a Shiba Inu" class="mat-img">
     <mat-card-header>
       <!--      <div mat-card-avatar class="example-header-image"></div>-->
       <mat-card-title>{{restaurant.name}}</mat-card-title>
       <!--      <mat-card-subtitle>Dog Breed</mat-card-subtitle>-->
     </mat-card-header>
     <mat-card-content>
+      <p>Rating:   {{restaurant.rating}}</p>
       <p>Opening Hours:   {{restaurant.openingHour}}</p>
       <p>Closing Hours:   {{restaurant.closingHour}}</p>
     </mat-card-content>
@@ -48,6 +49,7 @@
   <div class="menu-item-card" *ngFor="let item of menuItems">
 <!--    <img [src]="item.imageUrl" alt="{{item.name}}">-->
     <div class="content">
+      <img mat-card-image [src]="serverUrl + item.imageUrl" alt="Photo of a Shiba Inu" class="mat-img">
       <div class="title">{{ item.name }}</div>
       <div class="price">{{ item.price }} Lei</div>
     </div>

@@ -27,7 +27,8 @@ namespace MsaProject.Application.CommandHandlers.RestaurantCommandHandlers
                 Rating = request.Rating,
                 OpeningHour = request.OpeningHour,
                 ClosingHour = request.ClosingHour,
-                NumberOfTables = request.NumberOfTables
+                NumberOfTables = request.NumberOfTables,
+                ImageUrl = request.ImageUrl
             };
 
             repository.Insert(newRestaurant);

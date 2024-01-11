@@ -26,7 +26,7 @@ namespace MsaProject.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> CreateMenu(MenuPostDto newMenu)
+        public async Task<IActionResult> CreateMenu([FromBody] MenuPostDto newMenu)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
@@ -38,13 +38,15 @@ namespace MsaProject.Controllers
 
             var menu = await _mediator.Send(command);
 
-            if(menu != null)
-            {
-                var createdMenu = _mapper.Map<MenuGetDto>(menu);
-                return CreatedAtAction(nameof(GetMenuById), new { menuId = menu.Id }, createdMenu);
-            }
+            //if(menu != null)
+            //{
+            //    var createdMenu = _mapper.Map<MenuGetDto>(menu);
+            //    return CreatedAtAction(nameof(GetMenuById), new { menuId = menu.Id }, createdMenu);
+            //}
 
-            return StatusCode(StatusCodes.Status500InternalServerError, "Error creating new menu");
+            return Ok(menu);
+
+            //return StatusCode(StatusCodes.Status500InternalServerError, "Error creating new menu");
         }
         [HttpGet]
         [Route("get-menu-by-id/{restaurantId}")]
