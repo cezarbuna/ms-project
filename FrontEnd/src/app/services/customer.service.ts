@@ -13,4 +13,8 @@ export class CustomerService {
   getCustomerById(customerId: string): Observable<Customer>{
     return this.httpClient.get<Customer>(`https://localhost:7294/api/Customers/get-customer-by-id/${customerId}`);
   }
+
+  register(customerInfo: any): Observable<any>{
+    return this.httpClient.post('https://localhost:7294/api/Customers', customerInfo);
+  }
 }

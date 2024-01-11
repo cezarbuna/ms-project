@@ -1,0 +1,32 @@
+<div class="form-container">
+  <form class="form" (ngSubmit)="onSubmit()">
+    <mat-card class="reservation-card">
+      <mat-card-content class="reservation-form">
+        <mat-form-field>
+          <mat-label>Email </mat-label>
+          <input matInput type="email" placeholder="Email" [(ngModel)]="email" name="email" required>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Password </mat-label>
+          <input matInput type="password" placeholder="Password" [(ngModel)]="password" name="password" required>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Full Name </mat-label>
+          <input matInput type="text" placeholder="Your Full Name" [(ngModel)]="fullName" name="fullName" required>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Username </mat-label>
+          <input matInput type="text" placeholder="Your Username" [(ngModel)]="username" name="userName" required>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Age </mat-label>
+          <input matInput type="text" placeholder="Your Age" [(ngModel)]="age" name="age" required>
+        </mat-form-field>
+        <mat-card-subtitle style="color: red" *ngIf="errorMessage" class="error-message">{{errorMessage}}</mat-card-subtitle>
+      </mat-card-content>
+      <mat-card-footer class="reservation-form">
+        <button mat-raised-button type="submit">Register</button>
+      </mat-card-footer>
+    </mat-card>
+  </form>
+</div>

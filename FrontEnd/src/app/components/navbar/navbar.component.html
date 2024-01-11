@@ -6,9 +6,9 @@
   <div #home id="myLinks">
     <a mat-button routerLink="home" (click)="home.hidden = true">Home</a>
     <a mat-button routerLink="" (click)="home.hidden = true">View Restaurants</a>
-    <a mat-button (click)="goToOwnedReservations(); home.hidden = true;">My Reservations</a>
+    <a mat-button *ngIf="isLoggedIn()" (click)="goToOwnedReservations(); home.hidden = true;">My Reservations</a>
     <a mat-button *ngIf="!isLoggedIn()" routerLink="login" (click)="home.hidden = true">Login</a>
-    <a mat-button *ngIf="!isLoggedIn()" routerLink="login" (click)="home.hidden = true">Register</a>
+    <a mat-button *ngIf="!isLoggedIn()" routerLink="register" (click)="home.hidden = true">Register</a>
     <a mat-button *ngIf="isLoggedIn()" (click)="logOut(); home.hidden = true;">Logout</a>
   </div>
   <a href="javascript:void(0);" class="icon"(click)="home.hidden = false; myFunction()">

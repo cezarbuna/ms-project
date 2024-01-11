@@ -34,6 +34,7 @@ import {MatNativeDateModule} from "@angular/material/core";
 import {MatInputModule} from "@angular/material/input";
 import {MatSelectModule} from "@angular/material/select";
 import {MatListModule} from "@angular/material/list";
+import { RegisterComponent } from './components/register/register.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import {MatListModule} from "@angular/material/list";
     RestaurantComponent,
     ReservationComponent,
     ViewTablesComponent,
-    OwnedReservationsComponent
+    OwnedReservationsComponent,
+    RegisterComponent
   ],
   imports: [
     HttpClientModule,
